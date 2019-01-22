@@ -1,0 +1,50 @@
+body {
+	color: #000;
+}
+
+header {
+	background: #1B2C3C;
+	color: #FEDD41;
+}
+
+header span {
+	color: #FF0000;
+}
+
+content {
+	color: #000;
+}
+
+content .lesson {
+	border-bottom: 1px solid #808080;
+}
+
+content .lesson span {
+	color: #DF8618;
+	font-weight: bold;
+}
+
+content .lesson video {
+	border: 1px solid #000;
+	border-radius: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+	content #desc {
+		position: absolute;
+	    top: 10px;
+		left: 240px;
+	}
+}
+
+@media only screen and (max-width: 368px) {
+	content .title img {
+		position: relative;
+    	left: 85px;
+	}
+	content #desc {
+		position: relative;
+	    top: 0;
+		left: 100px;
+	}
+}
