@@ -30,7 +30,6 @@
 
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
 
-
   </head>
   <body>
     <!-- <div class="container">
@@ -42,44 +41,107 @@
     </div> -->
     <div id="myPortfolio">
       <header>
-        <img src="img/rm11.png" style="float: left" width="100px" height="100px"><h1 style="float: left">My Portfolio</h1><h2 style="float: left">Matviy Roman</h2>
-      </header>
-      <div class="container-fluid" style="float: none">
-        <h2>Skillset</h2>
-        <div class="row">
-          <div class="skillset">
-            <h3>Skills</h3>
-            <div class="row">
-            <div class="skill col-lg-2 col-md-12 col-sm-11 col-12"
-                              v-for="(skill, index) of skills"
-                              class="list-group-item list-group-item-action pointer">
-              <div class="skill">
-                <button type="button" class="btn btn-light col-9"><i :class="skill.img"></i>{{ skill.name }}</button>
-                <i class="devicon-php-plain colored"></i>
-
-                <!-- <div class="progress" style="height: 50px;"><strong class="m-3">{{ skill.name }}</strong></div>
-                <div class="progress mb-3" style="height: 50px;"> -->
-                  <!-- <strong class="col-2 mt-3 mr-3 mb-3 ml-1">{{ skill.name }}</strong> -->
-                  <!-- <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" v-bind:style="{ width: skill.num + '%' }" :aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100">{{ skill.num }} %</div> -->
-
-                  <!-- <div class="progress-bar" role="progressbar" :style="{ width: skill.num + '%' }" :aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100"><b>{{ skill.num }}</b> %</div> -->
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="container">
+          <div class="row">
+            <img src="img/rm11.png" class="align-content-center" width="100px" height="100px">
+            <h1>Roman Matviy</h1>
+            <div class="w-100"></div>
+            <h2>My Portfolio</h2>
           </div>
         </div>
-          <h3>Tools</h3>
-          <div class="tool col-lg-2 col-md-12 col-sm-11 col-12"
-                            v-for="(tool, index) of tools"
-                            class="list-group-item list-group-item-action pointer">
-            <div class="tools">
-              <div class="progress" style="height: 30px;"><strong class="m-2">{{ tool.name }}</strong></div>
+      </header>
+      <div class="skillset">
+        <div class="container-fluid">
+          <h2>Skillset</h2>
+
+          <h3>Front-end</h3>
+          <div class="row mb-3">
+            <div class="frontEnds col-lg-2 col-md-12 col-sm-11 col-12"
+                          v-for="(frontEnd, index) of frontEnds"
+                          class="list-group-item list-group-item-action pointer">
+              <div class="progress" style="height: 30px;">
+                <strong class="m-2">{{ frontEnd.name }}</strong>
+              </div>
               <div class="progress mb-3" style="height: 50px;">
-                <div class="progress-bar" role="progressbar" :style="{ width: tool.num + '%' }" aria-valuenow="skillnum" aria-valuemin="0" aria-valuemax="100"><b>{{ tool.num }}</b> %</div>
+                <div class="progress-bar" role="progressbar" :style="{ width: frontEnd.num + '%' }" aria-valuenow="frontEnd.num" aria-valuemin="0" aria-valuemax="100" :data-color="frontEnd.num"><b>{{ frontEnd.num }}</b> %</div>
               </div>
             </div>
           </div>
+
+          <h3>Back-end</h3>
+          <div class="row mb-3">
+            <div class="backEnds col-lg-2 col-md-12 col-sm-11 col-12"
+                          v-for="(backEnd, index) of backEnds"
+                          class="list-group-item list-group-item-action pointer">
+              <div class="progress" style="height: 30px;">
+                <strong class="m-2">{{ backEnd.name }}</strong>
+              </div>
+              <div class="progress mb-3" style="height: 50px;">
+                <div class="progress-bar" role="progressbar" :style="{ width: backEnd.num + '%' }" aria-valuenow="backEnd.num" aria-valuemin="0" aria-valuemax="100" :data-color="backEnd.num"><b>{{ backEnd.num }}</b> %</div>
+              </div>
+            </div>
+          </div>
+
+          <h3>CMS</h3>
+          <div class="row mb-3">
+            <div class="cms col-lg-2 col-md-12 col-sm-11 col-12"
+                          v-for="(cms, index) of cmss"
+                          class="list-group-item list-group-item-action pointer">
+              <div class="progress" style="height: 30px;">
+                <strong class="m-2">{{ cms.name }}</strong>
+              </div>
+              <div class="progress mb-3" style="height: 50px;">
+                <div class="progress-bar" role="progressbar" :style="{ width: cms.num + '%' }" aria-valuenow="cms.num" aria-valuemin="0" aria-valuemax="100" :data-color="cms.num"><b>{{ cms.num }}</b> %</div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Framework</h3>
+          <div class="row mb-3">
+            <div class="cms col-lg-2 col-md-12 col-sm-11 col-12"
+                          v-for="(framework, index) of frameworks"
+                          class="list-group-item list-group-item-action pointer">
+              <div class="progress" style="height: 30px;">
+                <strong class="m-2">{{ framework.name }}</strong>
+              </div>
+              <div class="progress mb-3" style="height: 50px;">
+                <div class="progress-bar" role="progressbar" :style="{ width: framework.num + '%' }" aria-valuenow="framework.num" aria-valuemin="0" aria-valuemax="100" :data-color="framework.num"><b>{{ framework.num }}</b> %</div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Skills</h3>
+          <div class="row mb-3">
+            <div class="skill col-lg-2 col-md-12 col-sm-11 col-12 mb-4"
+                            v-for="(skill, index) of skills"
+                            class="list-group-item list-group-item-action pointer">
+              <div class="progress" style="height: 30px;">
+                <strong class="m-2">{{ skill.name }}</strong>
+              </div>
+              <div class="progress mb-3" style="height: 50px;">
+                <div class="progress-bar" role="progressbar" :style="{ width: skill.num + '%' }" aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100" :data-color="skill.num"><b>{{ skill.num }}</b> %</div>
+              </div>
+
+              <!-- <button type="button" class="btn btn-light"><i :class="skill.img"></i>{{ skill.name }}</button>
+              <i class="devicon-php-plain colored"></i> -->
+            </div>
+          </div>
+
+          <h3>Tools</h3>
+          <div class="row mb-3">
+            <div class="tool col-lg-2 col-md-12 col-sm-11 col-12"
+                          v-for="(tool, index) of tools"
+                          class="list-group-item list-group-item-action pointer">
+              <div class="progress" style="height: 30px;">
+                <strong class="m-2">{{ tool.name }}</strong>
+              </div>
+              <div class="progress mb-3" style="height: 50px;">
+                <div class="progress-bar" role="progressbar" :style="{ width: tool.num + '%' }" aria-valuenow="tool.num" aria-valuemin="0" aria-valuemax="100" :data-color="tool.num"><b>{{ tool.num }}</b> %</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="projects">
         <div class="container-fluid">
@@ -91,6 +153,8 @@
               <h2>{{ project.name }}</h2>
               <div class="url">
                 <a :href="'http://' + project.url">{{ project.url }}</a>
+                <br>
+                <a :href="project.github">Source</a>
               </div>
               <div class="description">{{ project.desc }}</div>
               <div class="date">{{ project.date }}</div>
@@ -103,15 +167,16 @@
       <footer class="mb-5">
         <div class="container">
           <div class="row">
-              @ Roman Matviy 2018
+              @ Roman Matviy 2019
           </div>
         </div>
       </footer>
     </div>
-
-    PSD Models http://psd.matviy.pp.ua
-http://cheat.matviy.pp.ua/ Emmet-Cheat
-https://github.com/MatviyRoman/Tools-Programm
+    <a href="http://psd.matviy.pp.ua">PSD Models</a>
+    <br>
+    <a href="http://cheat.matviy.pp.ua">Emmet-Cheat</a>
+    <br>
+    <a href="https://github.com/MatviyRoman/Tools-Programm">Tools-Programm</a>
 
 
     <!-- Optional JavaScript -->
