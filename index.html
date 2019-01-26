@@ -10,11 +10,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="bourbon/core/_bourbon.scss">
+
     <!-- My Style CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <!-- My Style CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -24,17 +33,18 @@
 
   </head>
   <body>
-<div id="loader-wrapper">
-  <div id="loader"></div>
-  <div class="loader-section section-left"></div>
-  <div class="loader-section section-right"></div>
-</div>
+    <!-- <div class="container">
+      <div id="loader-wrapper">
+        <div id="loader">Loading</div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+    </div> -->
     <div id="myPortfolio">
       <header>
-        <h1>My Portfolio</h1>
-        
+        <img src="img/rm11.png" style="float: left" width="100px" height="100px"><h1 style="float: left">My Portfolio</h1><h2 style="float: left">Matviy Roman</h2>
       </header>
-      <div class="container-fluid">
+      <div class="container-fluid" style="float: none">
         <h2>Skillset</h2>
         <div class="row">
           <div class="skillset">
@@ -44,11 +54,15 @@
                               v-for="(skill, index) of skills"
                               class="list-group-item list-group-item-action pointer">
               <div class="skill">
-                <div class="progress" style="height: 50px;"><strong class="m-3">{{ skill.name }}</strong></div>
-                <div class="progress mb-3" style="height: 50px;">
+                <button type="button" class="btn btn-light col-9"><i :class="skill.img"></i>{{ skill.name }}</button>
+                <i class="devicon-php-plain colored"></i>
+
+                <!-- <div class="progress" style="height: 50px;"><strong class="m-3">{{ skill.name }}</strong></div>
+                <div class="progress mb-3" style="height: 50px;"> -->
                   <!-- <strong class="col-2 mt-3 mr-3 mb-3 ml-1">{{ skill.name }}</strong> -->
                   <!-- <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" v-bind:style="{ width: skill.num + '%' }" :aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100">{{ skill.num }} %</div> -->
-                  <div class="progress-bar" role="progressbar" :style="{ width: skill.num + '%' }" :aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100"><b>{{ skill.num }}</b> %</div>
+
+                  <!-- <div class="progress-bar" role="progressbar" :style="{ width: skill.num + '%' }" :aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100"><b>{{ skill.num }}</b> %</div> -->
                 </div>
               </div>
             </div>
@@ -66,8 +80,26 @@
               </div>
             </div>
           </div>
+
+      <div class="projects">
+        <div class="container-fluid">
+          <h3>My Projects</h3>
+          <div class="row">
+            <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4"
+                              v-for="(project, index) of projects"
+                              class="list-group-item list-group-item-action pointer">
+              <h2>{{ project.name }}</h2>
+              <div class="url">
+                <a :href="'http://' + project.url">{{ project.url }}</a>
+              </div>
+              <div class="description">{{ project.desc }}</div>
+              <div class="date">{{ project.date }}</div>
+              <div class="project-skills">{{ project.skills }}</div>
+            </div>
+          </div>
         </div>
       </div>
+
       <footer class="mb-5">
         <div class="container">
           <div class="row">
@@ -76,6 +108,10 @@
         </div>
       </footer>
     </div>
+
+    PSD Models http://psd.matviy.pp.ua
+http://cheat.matviy.pp.ua/ Emmet-Cheat
+https://github.com/MatviyRoman/Tools-Programm
 
 
     <!-- Optional JavaScript -->
@@ -91,6 +127,6 @@
     <script src="js/main.js"></script>
 
 
-    <script src='https://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script>
   </body>
 </html>

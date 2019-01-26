@@ -1,4 +1,31 @@
-​@import "bourbon";
+​.skill .btn {
+    display: flex;
+    align-items: center;
+    /*padding: 15px;*/
+    /*margin: 10px;*/
+    font-size: 18px;
+    font-family: 'Lato', arial, sans-serif;
+    font-weight: 400;
+    background: #eee;
+    color: #252525;
+    border-radius: 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+}
+
+.skill .btn:hover {
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+
+
+
+/*@import "bourbon";*/
 
 /* Demo Styles */
 
@@ -23,11 +50,10 @@ h1 {
   height: 100%;
   z-index: 10;
   overflow: hidden;
-  
-  // Modernizr no-js fallback
-  .no-js & {
+
+  /*.no-js & {
     display: none;
-  }
+  }*/
 }
 
 
@@ -72,9 +98,9 @@ h1 {
   }
 }
 
-// Bourbon mixins
+
 @include keyframes(spin) {
-  0% { 
+  0% {
     @include transform(rotate(0deg));
   }
   100% {
@@ -83,7 +109,7 @@ h1 {
 }
 
 @include keyframes(spin-reverse) {
-  0% { 
+  0% {
     @include transform(rotate(0deg));
   }
   100% {
@@ -135,17 +161,6 @@ h1 {
 .cold {background: #00f; color: #fff;}
 
 
-
-/*.[0-19] {
-	background: #000;
-}
-
-.\ 0 {color: red;}
-
-/[1-4]/g b {
-	background: #000;
-}
-*/
 /*body{
     background-color:black;
     animation: image 10s infinite alternate;
@@ -176,15 +191,9 @@ background-color:blue;
 	color: #000;
 }
 
-
-
-.progress-bar [0-23] {
-	background: red;
-}
-
 body:not(.skillsf) {
-	background: #1b2c3c;
-	color: #fff;
+	/*background: #1b2c3c;*/
+	/*color: #fff;*/
 }
 
 header {
