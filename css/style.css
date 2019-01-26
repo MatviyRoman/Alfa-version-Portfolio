@@ -1,20 +1,54 @@
-​.skill .btn {
-    display: flex;
-    align-items: center;
-    /*padding: 15px;*/
-    /*margin: 10px;*/
-    font-size: 18px;
-    font-family: 'Lato', arial, sans-serif;
-    font-weight: 400;
-    background: #eee;
-    color: #252525;
-    border-radius: 40px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    -webkit-transition: all .4s ease-in;
-    -moz-transition: all .4s ease-in;
-    -ms-transition: all .4s ease-in;
-    -o-transition: all .4s ease-in;
-    transition: all .4s ease-in;
+​header {
+  background-image: url(../photo2.png) right;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    background: #00f;
+    /*opacity: 0.5;*/
+    margin-right: 5px;
+}
+
+.fab,
+.far {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    /*width: 40%;*/
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+  background: #000;
+}
+
+
+.skill .btn {
+  display: flex;
+  align-items: center;
+  /*padding: 15px;*/
+  /*margin: 10px;*/
+  font-size: 18px;
+  font-family: 'Lato', arial, sans-serif;
+  font-weight: 400;
+  background: #eee;
+  color: #252525;
+  border-radius: 40px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  transition: all .4s ease-in;
 }
 
 .skill .btn:hover {

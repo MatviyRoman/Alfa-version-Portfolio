@@ -8,6 +8,36 @@ $(document).ready(function() {
 });
 
 
+
+// AboutMe Start
+const aboutMe = (name, num, img, link) => ({name, num, img, link});
+
+const aboutMes = [
+// aboutMe(
+// 	'HTML 5',
+// 	'85',
+// 	'devicon-html5-plain-wordmark colored html',
+// 	''),
+
+aboutMe(
+	'Front-end developer',
+	'Roman',
+	'Matviy',
+	'Lviv, Ukraine',
+	'roman@matviy.pp.ua',
+	'romas6ka',
+	'+380 93 88 00 822',
+	'+380 67 77 19 340',
+	'github.com/MatviyRoman',
+	'linkedin.com/in/MatviyRoman',
+	'facebook.com/romas6ka',
+	'Vue.js, Angular 2, TypeScript, PHP, MySQL',
+	'Vue.js, Node.js, Angular 2 / TypeScript, React, PHP, MySQL, AJAX',
+	'without bad habits, persistent and purposeful, responsible and executive, prone to analytical activity, prone to analytical activity, punctual')]
+// AboutMe End
+
+
+
 // Front-End Start
 const frontEnd = (name, num, img, link) => ({name, num, img, link});
 
@@ -21,6 +51,12 @@ frontEnd(
 frontEnd(
 	'CSS 3',
 	'80',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+frontEnd(
+	'CSS Flexbox',
+	'78',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
@@ -49,6 +85,37 @@ backEnd(
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip')]
 // Back-End End
+
+
+
+// Certificates Start
+const certificate = (date, name, cert, link) => ({date, name, cert, link});
+
+const certificates = [
+certificate(
+	'(09/2018)',
+	'HTML Fundamentals',
+	'License 1014-10299461',
+	'https://www.sololearn.com/Certificate/1014-10299461/pdf/'),
+
+certificate(
+	'(09/2018)',
+	'CSS Sertificate',
+	'License 1023-10299461',
+	'https://www.sololearn.com/Certificate/1023-10299461/pdf/'),
+
+certificate(
+	'(10/2018)',
+	'JavaScript Tutorial',
+	'License 1024-10299461',
+	'https://www.sololearn.com/Certificate/1024-10299461/pdf/'),
+
+certificate(
+	'(10/2018)',
+	'jQuery Tutorial',
+	'License 1082-10299461',
+	'https://www.sololearn.com/Certificate/1082-10299461/pdf/')]
+// Certificates End
 
 
 
@@ -133,13 +200,87 @@ language(
 
 
 
+// Links Start
+const link = (name, num, img, link) => ({name, num, img, link});
+
+const links = [
+link(
+	'English',
+	'35',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+link(
+	'Ukrainian',
+	'100',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+link(
+	'Russian',
+	'80',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip')]
+// Links End
+
+
+
+// Social Start
+const social = (name, icon, link) => ({name, icon, link});
+
+const socials = [
+social(
+	'GitHub',
+	'fab fa-github',
+	'https://github.com/MatviyRoman'),
+
+social(
+	'Facebook',
+	'fab fa-facebook',
+	'https://www.facebook.com/romas6ka'),
+
+social(
+	'Skype',
+	'fab fa-skype',
+	'skype:live:romas6ka'),
+
+social(
+	'Viber',
+	'fab fa-viber',
+	'viber:chat?number=+380677719340'),
+
+// social(
+// 	'YouTube',
+// 	'fa fa-youtube',
+// 	'https://www.youtube.com/channel/UCZ1W8CdO3fDnvsobEqkbv6w'),
+
+social(
+	'E-mail',
+	'far fa-envelope',
+	'#contact')]
+// Social End
+
+
+
 // Skills Start
 const skill = (name, num, img, link) => ({name, num, img, link});
 
 const skills = [
 skill(
+	'Browser Developer Tools',
+	'70',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+skill(
+	'PSD to HTML5',
+	'87',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+skill(
 	'Landing Page',
-	'80',
+	'30',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
@@ -153,7 +294,13 @@ skill(
 	'Plugin Elementor',
 	'70',
 	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'zip/wwwvuejs2.zip'),
+
+skill(
+	'UI / UX Design',
+	'25',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),]
 // Skills End
 
 
@@ -162,6 +309,18 @@ skill(
 const tool = (name, num, img, link) => ({name, num, img, link});
 
 const tools = [
+tool(
+	'Command Line',
+	'45',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
+	'FileZilla (FTP)',
+	'90',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
 tool(
 	'Git',
 	'30',
@@ -175,8 +334,32 @@ tool(
 	'zip/wwwvuejs2.zip'),
 
 tool(
+	'Avocode',
+	'90',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
+	'Brackets',
+	'40',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
 	'Sublime Text',
 	'80',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
+	'PhpStorm',
+	'36',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
+	'Visual Studio Code',
+	'49',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
@@ -217,7 +400,7 @@ project(
 	'https://github.com/MatviyRoman/Camel',
 	'Camel Heal',
 	`We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design'),
 
 project(
 	'21 Dec 2018',
@@ -225,7 +408,7 @@ project(
 	'https://github.com/MatviyRoman/HOME',
 	'Home',
 	'Зверстати у відповідності до прикріпленого макету. Необхідні технології: Сss framework: bootstrap 3 або 4 Js framework : Jquery Валідний код та адаптація під мобільні пристрої.',
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design'),
 
 project(
 	'15 Dec 2018',
@@ -233,7 +416,7 @@ project(
 	'http://magazino.ga',
 	'magazino.ga',
 	'My Home Project. Wordpress. My design with using plugin Elementor',
-	'HTML5, CSS3, Wordpress, plugin Elementor, design'),
+	'HTML5, CSS3, Wordpress, plugin Elementor, Landing Page'),
 
 project(
 	'8 Dec 2018',
@@ -241,7 +424,7 @@ project(
 	'https://github.com/MatviyRoman/Pantomax',
 	'Pantomax',
 	'Сделать верстку с макета и адаптировать ее под мобильные устройства. Ссылка прилагается на макет, адаптивную верстку необходимо сделать на свое усмотрение.',
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page',
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
 	'3'),
 
 project(
@@ -258,7 +441,7 @@ project(
 	'https://github.com/MatviyRoman/Travel-Agency',
 	'Travel Agency',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
 
 project(
 	'15 Nov 2018',
@@ -306,7 +489,7 @@ project(
 	'https://github.com/MatviyRoman/Startup.matviy.pp.ua',
 	'Startup',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
 
 project(
 	'1 Nov 2018',
@@ -322,7 +505,7 @@ project(
 	'https://github.com/MatviyRoman/example.matviy.pp.ua',
 	'example',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, Responsive Design'),
 
 project(
 	'26 Oct 2018',
@@ -338,7 +521,7 @@ project(
 	'https://github.com/MatviyRoman/mytesting.ga',
 	'mytesting.ga',
 	'HTML Tables Generation. My Home Project. Responsive design with psd layouts HTML Tables Generation',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
 
 project(
 	'10 Oct 2018',
@@ -346,15 +529,15 @@ project(
 	'https://github.com/MatviyRoman/Creatives-Project',
 	'Creatives',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design'),
 
 project(
 	'25 Jan 2019',
 	'arnika.matviy.pp.ua',
 	'https://github.com/MatviyRoman/www.arnika.od.ua',
 	'МЦ Арника arnika.od.ua',
-	'Було завдання з оригінального сайту зробити landing page. Оригінал з того, що я робив можна глянути тут http://arnika.matviy.pp.ua/original/index.html',
-	'HTML5, CSS3, Bootstrap 4, Responsive Design, Landing Page'),
+	'Було завдання з оригінального сайту зробити Responsive Design. Оригінал з того, що я робив можна глянути тут http://arnika.matviy.pp.ua/original/index.html',
+	'HTML5, CSS3, Bootstrap 4, Responsive Design'),
 
 project(
 	'7 Oct 2018',
@@ -362,7 +545,7 @@ project(
 	'https://github.com/MatviyRoman/My-Modal-Window',
 	'Window modal test',
 	'Responsive design with psd layouts. This is my window modal test.',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
 
 project(
 	'24 Sep 2018',
@@ -370,7 +553,7 @@ project(
 	'https://github.com/MatviyRoman/Bisines-Company-Project',
 	'Bisines-Company',
 	'My project building with bootstrap &amp; jQuery. Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page')]
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design')]
 // Project End
 
 
@@ -379,11 +562,15 @@ new Vue ({
 	// template:
  //  `<div :style="{width: '55%'}">t</div>`,
 	data: {
+		aboutMes,
 		backEnds,
+		certificates,
 		cmss,
 		frontEnds,
 		frameworks,
 		languages,
+		links,
+		socials,
 		skills,
 		// skill: skills[0],
 		tools,
@@ -417,14 +604,6 @@ new Vue ({
 })
 
 
-
-// if(browser == 'IE') {
-//   alert('О, да у вас IE!');
-// } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
-//   alert('Да, и эти браузеры мы поддерживаем');
-// } else {
-//   alert('Мы надеемся, что и в вашем браузере все ок!');
-// }
 
 // $('.skill:has(img[alt="5 copy_200comp.jpg"])').show();
 
