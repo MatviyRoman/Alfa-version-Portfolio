@@ -1,5 +1,80 @@
-​header {
+​body {
+  font-family: 'Merriweather', serif;
+}
+
+header {
   background-image: url(../photo2.png) right;
+}
+
+.cover-two {
+    background: #222 url(../img/cover-2.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250.625em;
+    height: 100vh;
+    background: url(../img/clouds.png) 0px 100% repeat-x;
+    -webkit-animation: cloudLoop 80s linear infinite;
+    animation: cloudLoop 80s linear infinite;
+}
+
+/*keyframes for cloud*/
+@-webkit-keyframes cloudLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes cloudLoop {
+  0% {
+    /* -webkit-transform: translate3d(0, 0, 0); */
+    /* transform: translate3d(0, 0, 0); */
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+
+.intro {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    padding: 0 15px;
+    z-index: 10;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+
+
+
+.portfolio-image a img {
+    width: 100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+.portfolio-image a:hover img {
+    opacity: .5
 }
 
 .icon {
@@ -20,6 +95,18 @@
     transform: translate(-50%, -70%);
     /*width: 40%;*/
 }
+
+/*.icon:hover {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    /*width: 40%;*/
+    -ms-transform: scale(1.1);
+    --o-transform: scale(1.1);
+    transform: scale(1.1);
+    --webkit-transform: scale(1.1);
+}*/
 
 a:visited,
 a:link {

@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 
 // AboutMe Start
-const aboutMe = (name, num, img, link) => ({name, num, img, link});
+const aboutMe = (title, fullname, location, email, skype, phone, mobile, github, linkedin, facebook) => ({title, fullname, location, email, skype, phone, mobile, github, linkedin, facebook});
 
 const aboutMes = [
 // aboutMe(
@@ -21,8 +21,7 @@ const aboutMes = [
 
 aboutMe(
 	'Front-end developer',
-	'Roman',
-	'Matviy',
+	'Roman Matviy',
 	'Lviv, Ukraine',
 	'roman@matviy.pp.ua',
 	'romas6ka',
@@ -33,7 +32,7 @@ aboutMe(
 	'facebook.com/romas6ka',
 	'Vue.js, Angular 2, TypeScript, PHP, MySQL',
 	'Vue.js, Node.js, Angular 2 / TypeScript, React, PHP, MySQL, AJAX',
-	'without bad habits, persistent and purposeful, responsible and executive, prone to analytical activity, prone to analytical activity, punctual')]
+	'punctual, without bad habits, persistent and purposeful, responsible and executive, prone to analytical activity, prone to analytical activity')]
 // AboutMe End
 
 
@@ -181,7 +180,13 @@ const language = (name, num, img, link) => ({name, num, img, link});
 const languages = [
 language(
 	'English',
-	'35',
+	'40',
+	'img/1.jpg',
+	''),
+
+language(
+	'Polish',
+	'28',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
@@ -330,6 +335,12 @@ tool(
 tool(
 	'GitHub',
 	'80',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
+	'NPM/Webpack',
+	'29',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
