@@ -2,8 +2,21 @@
   font-family: 'Merriweather', serif;
 }
 
-header {
-  background-image: url(../photo2.png) right;
+.logo {
+  color: #fff;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  width: 75px;
+  height: 75px;
+}
+
+.logo h2 {
+  position: relative;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .cover-two {
@@ -12,9 +25,10 @@ header {
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
+    overflow-x: hidden;
 }
 
-.hero-clouds {
+.clouds {
     position: absolute;
     top: 0;
     left: 0;
@@ -108,11 +122,11 @@ header {
     --webkit-transform: scale(1.1);
 }*/
 
-a:visited,
+/*a:visited,
 a:link {
     text-decoration: none;
     color: #fff;
-}
+}*/
 
 footer {
   background: #000;
@@ -191,7 +205,7 @@ h1 {
   border-top-color: #16a085;
   animation: spin 1.7s linear infinite;
   z-index: 11;
-  
+
   &:before {
     content: "";
     position: absolute;
@@ -204,7 +218,7 @@ h1 {
     border-top-color: #e74c3c;
     animation: spin-reverse .6s linear infinite;
   }
-  
+
   &:after {
     content: "";
     position: absolute;
@@ -322,9 +336,9 @@ header {
 	color: #FEDD41;
 }
 
-header span {
+/*header span {
 	color: #FF0000;
-}
+}*/
 
 content {
 	color: #000;
