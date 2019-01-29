@@ -315,14 +315,20 @@ const tool = (name, num, img, link) => ({name, num, img, link});
 
 const tools = [
 tool(
-	'Command Line',
-	'45',
+	'Chrome Browser',
+	'75',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
 tool(
-	'FileZilla (FTP)',
-	'90',
+	'Firefox Browser',
+	'63',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+tool(
+	'Command Line',
+	'45',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
@@ -338,54 +344,6 @@ tool(
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
-tool(
-	'NPM/Webpack',
-	'29',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'Avocode',
-	'90',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'Brackets',
-	'40',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'Sublime Text',
-	'80',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'PhpStorm',
-	'36',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'Visual Studio Code',
-	'49',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'Chrome Browser',
-	'70',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
-tool(
-	'Firefox Browser',
-	'70',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
-
 // tool(
 // 	'Slack',
 // 	'0',
@@ -393,16 +351,65 @@ tool(
 // 	'zip/wwwvuejs2.zip'),
 
 tool(
-	'Photoshop',
-	'50',
+	'NPM/Webpack',
+	'29',
 	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'zip/wwwvuejs2.zip'),]
 // Tool End
 
 
 
+// Programs Start
+const program = (name, num, img, link) => ({name, num, img, link});
+
+const programs = [
+program(
+	'Avocode',
+	'90',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+program(
+	'FileZilla (FTP)',
+	'90',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+// program(
+// 	'Brackets',
+// 	'40',
+// 	'img/1.jpg',
+// 	'zip/wwwvuejs2.zip'),
+
+program(
+	'Sublime Text',
+	'80',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+program(
+	'Photoshop',
+	'49',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+program(
+	'PhpStorm',
+	'36',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),
+
+program(
+	'Visual Studio Code',
+	'49',
+	'img/1.jpg',
+	'zip/wwwvuejs2.zip'),]
+// Programs End
+
+
+
 // Project Start
-const project = (date, url, github, name, desc, skills) => ({date, url, github, name, desc, skills});
+const project = (date, url, github, name, desc, skills, img) => ({date, url, github, name, desc, skills, img});
 
 const projects = [
 project(
@@ -411,7 +418,8 @@ project(
 	'https://github.com/MatviyRoman/Camel',
 	'Camel Heal',
 	`We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
+	'https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1'),
 
 project(
 	'21 Dec 2018',
@@ -585,6 +593,7 @@ new Vue ({
 		skills,
 		// skill: skills[0],
 		tools,
+		programs,
 		projects,
 		phoneVisibility: false,
 		searchLessons: ''
