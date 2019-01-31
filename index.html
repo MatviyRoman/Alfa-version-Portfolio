@@ -36,6 +36,9 @@
 
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
 
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
   </head>
   <body>
     <!-- <div class="container">
@@ -107,8 +110,55 @@
  -->
 
       <header>
+
+
+
+<!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.html">Smarte<span>x</span></a>
+</div>
+<div class="collapse navbar-collapse" id="custom-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li class="active"><a class="page-scroll" href="#home">Home</a></li>
+<li><a class="page-scroll" href="#about">About Me</a></li>
+<li><a class="page-scroll" href="#skills">Skills</a></li>
+<li><a class="page-scroll" href="#services">Services</a></li>
+<li><a class="page-scroll" href="#works">Works</a></li>
+<li><a class="page-scroll" href="#contact">Hire Me</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="blog-details.html">Blog Details</a></li>
+<li><a href="portfolio-details.html">Portfolio Details</a></li>
+ <li><a href="index.html">Home Default</a></li>
+<li class="current-page"><a href="index-cloud.html">Home Cloud</a></li>
+<li><a href="index-kenburns.html">Home Kenburns</a></li>
+<li><a href="index-particle.html">Home Particle</a></li>
+<li><a href="index-rotator-01.html">Home Type Text</a></li>
+<li><a href="index-rotator-02.html">Home Rotate One</a></li>
+<li><a href="index-rotator-03.html">Home Rotate Two</a></li>
+<li><a href="index-rotator-04.html">Home Loading Bar</a></li>
+<li><a href="index-rotator-05.html">Home Clip Text</a></li>
+<li><a href="index-video.html">Home HTML Video</a></li>
+<li><a href="index-youtube.html">Home Youtube</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav> -->
+
+
+
           <section id="home" class="cover-two tt-fullHeight" style="height: 780px;">
-            <div class="logo m-3">
+            <div class="logo mt-3 ml-5">
               <h2>RM</h2>
             </div>
             <div class="clouds"></div>
@@ -144,37 +194,54 @@
           </section>
 
 
-          <section id="about" class="about-section">
+          <section id="about" class="about-section pb-4">
             <div class="container">
-              <div class="row justify-content-between">
-                <div class="image-container m-5 col-4">
-                  <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1" class="img-fluid">
-                </div>
-                <div class="col-5 mt-5 pt-5">
-                  <div class="row align-content-center">
-                  <h2>I am Roman Matviy! <span>A twenty five year old designer from NY.</span></h2>
-                  <p>I have graduated with a Bachelor degree of Graphic &amp; Web Design, from the University of Ukraine. I have a passion for creating challenging, intuitive and beautiful products.</p></div>
-                  <!-- <p>test</p> -->
-                  <div class="my-signature">
-                    <img src="assets/images/sign.png" alt="">
+              <div class="abouts"
+                    v-for="(aboutMe, index) of abouts">
+                <div class="row justify-content-between">
+                  <div class="image-container m-5 col-4 wow bounceInRight">
+                    <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1" class="img-fluid">
                   </div>
-                  <div class="download-button">
-                    <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-cloud-download"></i> Download CV</a>
-                    <a class="btn btn-default btn-lg" href="#"><i class="fa fa-briefcase"></i> Hire Me</a>
+                  <div class="col-5 mt-5 pt-5">
+                    <div class="row align-content-center wow bounceInLeft">
+                      <h2>I am Roman Matviy! <span>A twenty five year old designer from NY.</span></h2>
+                      <p>I have graduated with a Bachelor degree of Graphic &amp; Web Design, from the University of Ukraine. I have a passion for creating challenging, intuitive and beautiful products.</p>
+                      <div class="w-100 mb-3"></div>
+                      <br>
+                      <br>
+                      <p>
+                        Full Name: <strong class="m-2 pb-2">{{ aboutMe.fullname }}</strong>
+                        <br>
+                        Location: <strong class="m-2 pb-2">{{ aboutMe.location }}</strong>
+                        <br>
+                        email: <strong class="m-2 pb-2">{{ aboutMe.email }}</strong>
+                        <br>
+                        skype: <strong class="m-2 pb-2">{{ aboutMe.skype }}</strong>
+                        <br>
+                        phone: <strong class="m-2 pb-2">{{ aboutMe.phone }}</strong>
+                        <br>
+                        mobile: <strong class="m-2 pb-2">{{ aboutMe.mobile }}</strong>
+                        <br>
+                        github: <strong class="m-2 pb-2">{{ aboutMe.github }}</strong>
+                        <br>
+                        linkedin: <strong class="m-2 pb-2">{{ aboutMe.linkedin }}</strong>
+                        <br>
+                        facebook: <strong class="m-2 pb-2">{{ aboutMe.facebook }}</strong>
+                      </p>
+                    </div>
+                    <!-- <p>test</p> -->
+                    <div class="my-signature">
+                      <img src="assets/images/sign.png" alt="">
+                    </div>
+                    <div class="download-button">
+                      <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-cloud-download"></i> Download CV</a>
+                      <a class="btn btn-default btn-lg" href="#"><i class="fa fa-briefcase"></i> Hire Me</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-
-          <div class="container">
-            <div class="row align-content-center">
-              <img src="img/rm11.png" width="100px" height="100px">
-              <h1>Roman Matviy</h1>
-              <div class="w-100"></div>
-              <h2>My Portfolio</h2>
-            </div>
-          </div>
         </header>
 
 
@@ -203,7 +270,7 @@
 
       <section class="skillset-section pt-5 pb-5">
         <div class="container">
-          <h2 class="section-title animated pulse mb-5">Skills</h2>
+          <h2 class="section-title wow animated pulse mb-5">Skills</h2>
           <div class="row justify-content-around mb-3">
             <div id="skill" class="col-md-4 col-6">
               <div class="section-title wow animated fadeInUp mb-3">
@@ -663,19 +730,20 @@
             <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-5"
                               v-for="(project, index) of projects"
                               class="list-group-item list-group-item-action pointer">
-              <div class="testx mt-5 mb-5">
-                <img src="img/desctop.png" class="test1 img-fluid">
+              <div class="testx mt-5 mb-0 wow slideInRight">
+                <img src="img/demo-231.png" class="test1 img-fluid">
+                <div class="w-100"></div>
                 <img src="img/1012.jpg" class="test img-fluid" alt="">
               </div>
+              <div class="url wow slideInLeft">
               <h2>{{ project.name }}</h2>
-              <div class="url">
                 <a :href="'http://' + project.url">{{ project.url }}</a>
                 <br>
                 <a :href="project.github">Source</a>
+                <div class="description">{{ project.desc }}</div>
+                <div class="date">{{ project.date }}</div>
+                <div class="project-skills">{{ project.skills }}</div>
               </div>
-              <div class="description">{{ project.desc }}</div>
-              <div class="date">{{ project.date }}</div>
-              <div class="project-skills">{{ project.skills }}</div>
             </div>
           </div>
         </div>
@@ -829,6 +897,58 @@
 </div> -->
 
 
+
+<style>
+  .block{
+    width: 110px;
+    height: 110px;
+    margin: 100px auto;
+}
+.prec{
+    top: 30px;
+    position: relative;
+    font-size: 30px;
+}
+
+.circle{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #E6F4F7;
+}
+
+.active-border{
+    position: relative;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+
+    background-color:#39B4CC;
+    background-image:
+        linear-gradient(162deg, transparent 50%, #A2ECFB 50%),
+        linear-gradient(90deg, #A2ECFB 50%, transparent 50%);
+    
+}
+</style>
+<div class="block">
+    <div id="activeBorder" class="active-border">
+        <div id="circle" class="circle">
+            <span class="prec 270" id="prec">20%</span>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <div id="activeBorder" class="active-border">
+        <div id="circle" class="circle">
+            <span class="prec 270" id="prec">80%</span>
+        </div>
+    </div>
+</div>
 
 
 

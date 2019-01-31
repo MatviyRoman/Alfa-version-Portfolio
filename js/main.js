@@ -12,7 +12,7 @@ $(document).ready(function() {
 // AboutMe Start
 const aboutMe = (title, fullname, location, email, skype, phone, mobile, github, linkedin, facebook) => ({title, fullname, location, email, skype, phone, mobile, github, linkedin, facebook});
 
-const aboutMes = [
+const abouts = [
 // aboutMe(
 // 	'HTML 5',
 // 	'85',
@@ -581,7 +581,7 @@ new Vue ({
 	// template:
  //  `<div :style="{width: '55%'}">t</div>`,
 	data: {
-		aboutMes,
+		abouts,
 		backEnds,
 		certificates,
 		cmss,

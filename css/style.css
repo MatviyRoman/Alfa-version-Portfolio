@@ -622,7 +622,7 @@ content .lesson video {
 }
 
 .test1 {
-  position: absolute;
+  position: relative;
   z-index: 111;
 }
 
@@ -637,5 +637,5 @@ content .lesson video {
     /*width: 351px;
     height: 196px;*/
     position: absolute;
-   /* margin: 16px 21px 76px 17px;*/
+    top: 0;
 }
