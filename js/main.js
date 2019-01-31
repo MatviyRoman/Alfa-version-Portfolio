@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 
 // AboutMe Start
-const aboutMe = (title, fullname, location, email, skype, phone, mobile, github, linkedin, facebook) => ({title, fullname, location, email, skype, phone, mobile, github, linkedin, facebook});
+const aboutMe = (title, fullname, location, nationality, email, skype, phone, mobile, github, linkedin, facebook) => ({title, fullname, location, nationality, email, skype, phone, mobile, github, linkedin, facebook});
 
 const abouts = [
 // aboutMe(
@@ -23,6 +23,7 @@ aboutMe(
 	'Front-end developer',
 	'Roman Matviy',
 	'Lviv, Ukraine',
+	'Ukrainian',
 	'roman@matviy.pp.ua',
 	'romas6ka',
 	'+380 93 88 00 822',
