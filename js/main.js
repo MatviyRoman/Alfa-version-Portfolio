@@ -695,13 +695,52 @@ new Vue ({
 
 
 
+// $(document).ready(function(){
+// 	var mc = {
+// 	    '0-19'     : 'bg-danger',
+// 	    '20-39'    : 'bg-warning',
+// 	    '40-59'    : 'bg-info',
+// 	    '60-79'    : 'bg-success',
+// 	    '80-100'   : ''
+// 	};
+
+// 	function between(x, min, max) {
+// 	  	return x >= min && x <= max;
+// 	}
+
+// 	var dc;
+// 	var first;
+// 	var second;
+// 	var th;
+
+// 	$('.pbp, .c100').each(function(index){
+
+//     	th = $(this);
+
+//     	dc = parseInt($(this).attr('data-color'),10);
+
+
+//       	$.each(mc, function(name, value){
+
+// 	        first = parseInt(name.split('-')[0],10);
+// 	        second = parseInt(name.split('-')[1],10);
+
+// 	        // console.log(between(dc, first, second));
+
+// 	        if( between(dc, first, second) ){
+// 	          	th.addClass(value);
+// 	        }
+//       	});
+//   	});
+// });
+
 $(document).ready(function(){
 	var mc = {
-	    '0-19'     : 'bg-danger',
-	    '20-39'    : 'bg-warning',
-	    '40-59'    : 'bg-info',
-	    '60-79'    : 'bg-success',
-	    '80-100'   : ''
+	    '0-19'     : 'pink',
+	    '20-39'    : 'yellow',
+	    '40-59'    : 'green',
+	    '60-79'    : 'green',
+	    '80-100'   : 'blue'
 	};
 
 	function between(x, min, max) {
@@ -713,11 +752,11 @@ $(document).ready(function(){
 	var second;
 	var th;
 
-	$('.progress-bar').each(function(index){
+	$('.circle').each(function(index){
 
     	th = $(this);
 
-    	dc = parseInt($(this).attr('data-color'),10);
+    	dc = parseInt($(this).attr('circle-color'),10);
 
 
       	$.each(mc, function(name, value){
@@ -733,3 +772,40 @@ $(document).ready(function(){
       	});
   	});
 });
+
+
+// var delay = 500;
+// $(".progress-bar").each(function(i) {
+//   $(this).delay(delay * i).animate({
+//     width: $(this).attr('aria-valuenow') + '%'
+//   }, delay);
+
+//   $(this).prop('Counter', 0).animate({
+//     Counter: $(this).text()
+//   }, {
+//     duration: delay,
+//     // easing: 'swing',
+//     step: function(now) {
+//       $(this).text(Math.ceil(now) + '%');
+//     }
+//   });
+// });
+
+
+
+
+// <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+// $(document).ready(function(){
+//     $('.progress-title > b').each(function(){
+//         $(this).prop('Counter',0).animate({
+//             Counter: $(this).text()
+//         },{
+//             duration: 1500,
+//             easing: 'swing',
+//             step: function (now){
+//                 $(this).text(Math.ceil(now));
+//             }
+//         });
+//     });
+// });
