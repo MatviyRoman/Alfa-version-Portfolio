@@ -232,7 +232,7 @@ link(
 
 
 // Social Start
-const social = (name, icon, link) => ({name, icon, link});
+const social = (name, icon, url) => ({name, icon, url});
 
 const socials = [
 social(
@@ -352,7 +352,7 @@ tool(
 // 	'zip/wwwvuejs2.zip'),
 
 tool(
-	'NPM/Webpack',
+	'NPM / Webpack',
 	'29',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),]
@@ -695,44 +695,44 @@ new Vue ({
 
 
 
-// $(document).ready(function(){
-// 	var mc = {
-// 	    '0-19'     : 'bg-danger',
-// 	    '20-39'    : 'bg-warning',
-// 	    '40-59'    : 'bg-info',
-// 	    '60-79'    : 'bg-success',
-// 	    '80-100'   : ''
-// 	};
+$(document).ready(function(){
+	var mc = {
+	    '0-19'     : 'bg-danger',
+	    '20-39'    : 'bg-warning',
+	    '40-59'    : 'bg-info',
+	    '60-79'    : 'bg-success',
+	    '80-100'   : ''
+	};
 
-// 	function between(x, min, max) {
-// 	  	return x >= min && x <= max;
-// 	}
+	function between(x, min, max) {
+	  	return x >= min && x <= max;
+	}
 
-// 	var dc;
-// 	var first;
-// 	var second;
-// 	var th;
+	var dc;
+	var first;
+	var second;
+	var th;
 
-// 	$('.pbp, .c100').each(function(index){
+	$('.progress-bar, .c100').each(function(index){
 
-//     	th = $(this);
+    	th = $(this);
 
-//     	dc = parseInt($(this).attr('data-color'),10);
+    	dc = parseInt($(this).attr('data-color'),10);
 
 
-//       	$.each(mc, function(name, value){
+      	$.each(mc, function(name, value){
 
-// 	        first = parseInt(name.split('-')[0],10);
-// 	        second = parseInt(name.split('-')[1],10);
+	        first = parseInt(name.split('-')[0],10);
+	        second = parseInt(name.split('-')[1],10);
 
-// 	        // console.log(between(dc, first, second));
+	        // console.log(between(dc, first, second));
 
-// 	        if( between(dc, first, second) ){
-// 	          	th.addClass(value);
-// 	        }
-//       	});
-//   	});
-// });
+	        if( between(dc, first, second) ){
+	          	th.addClass(value);
+	        }
+      	});
+  	});
+});
 
 $(document).ready(function(){
 	var mc = {
@@ -809,3 +809,16 @@ $(document).ready(function(){
 //         });
 //     });
 // });
+
+
+
+$('.skillset-section').hover(
+   function(){
+       	$('.progress-bar').addClass('hover');
+       	$('.progress-bar').removeClass('hide');
+        },
+   function(){
+       	$('.progress-bar').removeClass('hover');
+       	$('.progress-bar').addClass('hide');
+   }
+)

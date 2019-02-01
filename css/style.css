@@ -21,7 +21,7 @@ header>section>.logo {
   height: 75px;
 }
 
-.logo h2 {
+header>section>.logo h2 {
   position: relative;
   top: 50%;
   left: 60%;
@@ -30,28 +30,33 @@ header>section>.logo {
   font-weight: bold;
 }
 
-.cover-two {
-    background: #222 url(../img/cover-2.jpg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: relative;
-    overflow-x: hidden;
+header .cover-two {
+  background-size: cover;
+  background: #222 url(../img/cover-2.jpg) no-repeat center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-top: 21%;
+  padding-bottom: 21%;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.clouds {
+header .clouds {
     position: absolute;
     top: 0;
     left: 0;
     width: 250.625em;
-    height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
+    /*height: 100vh;*/
     background: url(../img/clouds.png) 0px 100% repeat-x;
-    -webkit-animation: cloudLoop 80s linear infinite;
-    animation: cloudLoop 80s linear infinite;
+    -webkit-animation: cloudsLoop 80s linear infinite;
+    animation: cloudsLoop 80s linear infinite;
 }
 
-/*keyframes for cloud*/
-@-webkit-keyframes cloudLoop {
+/*keyframes for clouds*/
+@-webkit-keyframes cloudsLoop {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -61,7 +66,7 @@ header>section>.logo {
             transform: translate3d(-50%, 0, 0);
   }
 }
-@keyframes cloudLoop {
+@keyframes cloudsLoop {
   0% {
     /* -webkit-transform: translate3d(0, 0, 0); */
     /* transform: translate3d(0, 0, 0); */
@@ -72,6 +77,31 @@ header>section>.logo {
   }
 }
 
+section h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.about {
+  background: #222;
+  color: #fbdb65;
+}
+
+.about .btn-default {
+  color: #fff;
+  background-color: rgba(102, 102, 102, 0.32);
+}
+
+.about .me {
+  outline: 3px solid rgba(34, 34, 34, .7);
+  outline-offset: -15px;
+}
+
+.social {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
 
 
 .intro {
@@ -133,25 +163,12 @@ header>section>.logo {
     --webkit-transform: scale(1.1);
 }
 
-/*a:visited,
-a:link {
-    text-decoration: none;
-    color: #fff;
-}*/
-
-section>.about {
-}
 
 .skillset-section {
   background-color: #1a1e23;
   color: #fff;
 }
 
-.skillset-section h3 {
-  background-color: #1a1e23;
-  color: #fff;
-  font-size: 30px;
-}
 
 .section-title {
   font-size: 50px;
@@ -216,12 +233,31 @@ section>.about {
 .progress-bar {
   width: 0;
   display: inline;
-  transition: unset;
+  animation: progress 1.5s ease-in-out forwards;
+}
+
+.hideBar {
+  animation: progress 1.5s ease-in-out forwards;
+}
+
+@keyframes progress {
+/*  from {
+    width: 100;
+  }*/
+  to {
+    width: 0;
+  }
+}
+
+.showBar {
+ /* width: 0;
+  display: inline;
+  transition: unset;*/
   animation: progress 1.5s ease-in-out forwards;
 
   .number {
     opacity: 0;
-    animation: show 0.35s forwards ease-in-out 0.5s;
+    animation: progress 0.35s forwards ease-in-out 0.5s;
   }
 }
 @keyframes progress {
@@ -323,7 +359,7 @@ section>.about {
 
 
 
-//styling
+/*styling*/
 /*$borderWidth: 7px;
 $animationTime: 1.5s;
 $border-color-default: #eee;
@@ -331,7 +367,7 @@ $border-color-fill: #ffb43e;
 $size: 150px;
 
 //Create how many steps
-$howManySteps: 10; //this needs to be even. 
+$howManySteps: 10; //this needs to be even.
 //for fun try using 20 and changine in the HTML the data-percentage to 15 or 85
 
 .progress {
@@ -413,25 +449,25 @@ $howManySteps: 10; //this needs to be even.
       text-transform: uppercase;
     }
   }
-}
+}*/
 
-/* This for loop creates the  necessary css animation names 
-Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+/* This for loop creates the  necessary css animation names
+Due to the split circle of progress-left and progress right, we must use the animations on each side.
 */
-@for $i from 1 through $howManySteps {
-  $stepName: ($i*(100 / $howManySteps));
+/*@for $i from 1 through $howManySteps {
+  $stepName: ($i*(100 / $howManySteps));*/
 
-  //animation only the left side if below 50%
-  @if $i <= ($howManySteps/2) { 
+  /*animation only the left side if below 50%*/
+  /*@if $i <= ($howManySteps/2) {
     .progress[data-percentage="#{$stepName}"] {
       .progress-right .progress-bar {
          animation: loading-#{$i} $animationTime linear forwards;
       }
       .progress-left .progress-bar {animation: 0;}
     }
-  }
-  //animation only the right side if above 50%
-  @if $i > ($howManySteps/2)  {  
+  }*/
+  /*animation only the right side if above 50%*/
+ /* @if $i > ($howManySteps/2)  {
     .progress[data-percentage="#{$stepName}"] {
       .progress-right .progress-bar {
         animation: loading-#{($howManySteps/2)} $animationTime linear forwards; //set the animation to longest animation
@@ -441,10 +477,10 @@ Due to the split circle of progress-left and progress right, we must use the ani
     }
     }
   }
-}*/
-
-//animation
-/*@for $i from 1 through ($howManySteps/2) { 
+}
+*/
+/*animation*/
+/*@for $i from 1 through ($howManySteps/2) {
   $degrees: (180/($howManySteps/2));
   $degrees: ($degrees*$i);
   @keyframes loading-#{$i}{
@@ -463,6 +499,9 @@ Due to the split circle of progress-left and progress right, we must use the ani
     margin-bottom: 1em;
   }
 */
+
+
+
 
 
 
