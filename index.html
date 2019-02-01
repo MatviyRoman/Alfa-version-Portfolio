@@ -10,9 +10,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- My Style CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <!-- Circle -->
     <link rel="stylesheet" type="text/css" href="css/circle.css">
 
@@ -25,7 +22,6 @@
 
     <!-- Fontawesome CSS-->
     <link rel="stylesheet" type="text/css" href="fontawesome-pro/css/all.css">
-
     <!-- Fontawesome JS-->
     <!-- <script src="fontawesome/js/all.js" type="text/javascript" charset="utf-8" async defer></script> -->
 
@@ -36,14 +32,23 @@
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
-    <!-- Animate CSS -->
+    <!-- Animate CSS / JS -->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/animated-headline.css">
+    <script src="js/wow.min.js"></script>
+    <script>
+      wow = new WOW({
+      boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      })
+      wow.init();
+    </script>
 
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
 
-    <script src="js/wow.min.js"></script>
-    <script>new WOW().init();</script>
     <!-- <script>var delay = 500;
 $(".progress-bar").each(function(i) {
   $(this).delay(delay * i).animate({
@@ -76,168 +81,56 @@ $(".progress-bar").each(function(i) {
 
   </head>
   <body>
-    <!-- <div class="container">
+    <div class="container">
       <div id="loader-wrapper">
-        <div id="loader">Loading</div>
+        <!-- <div id="loader">Loading</div> -->
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
       </div>
-    </div> -->
-
+    </div>
     <div id="myPortfolio">
-
-
- <!--  <section id="home" class="cover-two tt-fullHeight" style="height: 700px;">
-  <div class="hero-clouds"></div> -->
-
-    <!-- <div class="row align-items-center">
-  <div class="mouse-icon hidden-sm hidden-xs">
-      <div class="wheel"></div> -->
-
-
-<!-- <div class="intro">
-<div class="tt-text-intro">
-<h1 class="tt-headline letters type">
-
-<span>I'm </span>
-<span class="tt-words-wrapper selected">
-<b class="is-hidden" style="opacity: 1;"><i class="out">R</i><i class="out">o</i><i class="out">m</i><i class="out">a</i><i class="out">n</i><i class="out">&nbsp;</i><i class="out">M</i><i class="out">a</i><i class="out">t</i><i class="out">v</i><i class="out">i</i><i class="out">y</i></b>
-<b style="opacity: 1;" class="is-hidden"><i class="out">P</i><i class="out">r</i><i class="out">o</i><i class="out">f</i><i class="out">e</i><i class="out">s</i><i class="out">s</i><i class="out">i</i><i class="out">o</i><i class="out">n</i><i class="out">a</i><i class="out">l</i></b>
-<b style="opacity: 1;" class="is-visible"><i class="in">M</i><i class="in">i</i><i class="in">n</i><i class="in">i</i><i class="in">m</i><i class="in">a</i><i class="in">l</i><i class="in">i</i><i class="in">s</i><i class="in">t</i></b>
-<b style="opacity: 1;" class="is-hidden"><i class="out">P</i><i class="out">a</i><i class="out">s</i><i class="out">s</i><i class="out">i</i><i class="out">o</i><i class="out">n</i><i class="out">a</i><i class="out">t</i><i class="out">e</i></b>
-</span>
-</h1>
-</div>
-<span class="tt-sub-intro">Product designer</span>
-<ul class="list-inline social-link">
-<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-<li><a href="#"><i class="fa fa-behance"></i></a></li>
-<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-</ul>
-</div> -->
-
-
-<!-- <div class="intro">
-<div class="tt-text-intro">
-<h1 class="tt-headline letters rotate-2">
-
-<span class="tt-words-wrapper" style="width: 487px;">
-<b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
-<b style="opacity: 1;"><i class="out"><em>P</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>f</em></i><i class="out"><em>e</em></i><i class="out"><em>s</em></i><i class="out"><em>s</em></i><i class="out"><em>i</em></i><i class="out"><em>o</em></i><i class="out"><em>n</em></i><i class="out"><em>a</em></i><i class="out"><em>l</em></i></b>
-<b style="opacity: 1;"><i class="out"><em>M</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>i</em></i><i class="out"><em>m</em></i><i class="out"><em>a</em></i><i class="out"><em>l</em></i><i class="out"><em>i</em></i><i class="out"><em>s</em></i><i class="out"><em>t</em></i></b>
-<b style="opacity: 1;"><i class="out"><em>P</em></i><i class="out"><em>a</em></i><i class="out"><em>s</em></i><i class="out"><em>s</em></i><i class="out"><em>i</em></i><i class="out"><em>o</em></i><i class="out"><em>n</em></i><i class="out"><em>a</em></i><i class="out"><em>t</em></i><i class="out"><em>e</em></i></b>
-</span>
-</h1>
-</div>
-<span class="tt-sub-intro">Front-end developer</span>
-<ul class="list-inline social-link">
-<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-<li><a href="#"><i class="fa fa-behance"></i></a></li>
-<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-</ul>
-</div>
-
-</section>
- -->
-
       <header>
-
-
-
-<!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-<div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="index.html">Smarte<span>x</span></a>
-</div>
-<div class="collapse navbar-collapse" id="custom-collapse">
-<ul class="nav navbar-nav navbar-right">
-<li class="active"><a class="page-scroll" href="#home">Home</a></li>
-<li><a class="page-scroll" href="#about">About Me</a></li>
-<li><a class="page-scroll" href="#skills">Skills</a></li>
-<li><a class="page-scroll" href="#services">Services</a></li>
-<li><a class="page-scroll" href="#works">Works</a></li>
-<li><a class="page-scroll" href="#contact">Hire Me</a></li>
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
-<ul class="dropdown-menu">
-<li><a href="blog-details.html">Blog Details</a></li>
-<li><a href="portfolio-details.html">Portfolio Details</a></li>
- <li><a href="index.html">Home Default</a></li>
-<li class="current-page"><a href="index-cloud.html">Home Cloud</a></li>
-<li><a href="index-kenburns.html">Home Kenburns</a></li>
-<li><a href="index-particle.html">Home Particle</a></li>
-<li><a href="index-rotator-01.html">Home Type Text</a></li>
-<li><a href="index-rotator-02.html">Home Rotate One</a></li>
-<li><a href="index-rotator-03.html">Home Rotate Two</a></li>
-<li><a href="index-rotator-04.html">Home Loading Bar</a></li>
-<li><a href="index-rotator-05.html">Home Clip Text</a></li>
-<li><a href="index-video.html">Home HTML Video</a></li>
-<li><a href="index-youtube.html">Home Youtube</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</nav> -->
-
-
-
-          <section id="home" class="cover-two tt-fullHeight" style="height: 780px;">
-            <div class="logo mt-3 ml-5">
-              <h2>RM</h2>
+        <section id="home" class="cover-two">
+          <div class="logo mt-3 ml-5">
+            <h2>RM</h2>
+          </div>
+          <div class="clouds"></div>
+          <div class="intro">
+            <div class="tt-text-intro">
+              <h1 class="tt-headline letters rotate-2">
+                <span class="tt-words-wrapper">
+                  <b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
+                  <b style="opacity: 1;"><i class="out"><em>I</em></i><i class="out"><em>'</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>F</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>U</em></i><i class="out"><em>k</em></i><i class="out"><em>r</em></i><i class="out"><em>a</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>e</em></i></b>
+                </span>
+              </h1>
             </div>
-            <div class="clouds"></div>
-            <div class="intro">
-              <div class="tt-text-intro col-10">
-                <h1 class="tt-headline letters rotate-2">
-                  <span class="tt-words-wrapper">
-                    <b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
-                    <b style="opacity: 1;"><i class="out"><em>I</em></i><i class="out"><em>'</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>F</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>U</em></i><i class="out"><em>k</em></i><i class="out"><em>r</em></i><i class="out"><em>a</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>e</em></i></b>
-
-                    <!-- <b style="opacity: 1;"><i class="out"><em>P</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>f</em></i><i class="out"><em>e</em></i><i class="out"><em>s</em></i><i class="out"><em>s</em></i><i class="out"><em>i</em></i><i class="out"><em>o</em></i><i class="out"><em>n</em></i><i class="out"><em>a</em></i><i class="out"><em>l</em></i></b> -->
-
-                    <!-- <b style="opacity: 1;"><i class="out"><em>M</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>i</em></i><i class="out"><em>m</em></i><i class="out"><em>a</em></i><i class="out"><em>l</em></i><i class="out"><em>i</em></i><i class="out"><em>s</em></i><i class="out"><em>t</em></i></b> -->
-
-                    <!-- <b style="opacity: 1;"><i class="out"><em>P</em></i><i class="out"><em>a</em></i><i class="out"><em>s</em></i><i class="out"><em>s</em></i><i class="out"><em>i</em></i><i class="out"><em>o</em></i><i class="out"><em>n</em></i><i class="out"><em>a</em></i><i class="out"><em>t</em></i><i class="out"><em>e</em></i></b> -->
-
-                  </span>
-                </h1>
-              </div>
-              <span class="tt-sub-intro">Front-end developer</span>
-              <ul class="list-inline social-link col-12">
-                <li><a href="#"><i class="fab fa-github"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-skype"></i></a></li>
-                <li><a href="#"><i class="fab fa-viber"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                <li><a href="#"><i class="fas fa-at"></i></a></li>
-              </ul>
+            <span class="tt-sub-intro">Front-end developer</span>
+          </div>
+        </section>
+      </header>
+      <!-- <section class="social col-1">
+        <div class="container-fluid">
+          <div class="socials"
+            v-for="(social, index) of socials">
+          <div class="row">
+            <div>
+              <a :href="social.url"><i :class="social.icon"></i></a>
             </div>
-          </section>
+          </div>
+        </div>
+      </section> -->
 
 
-          <section id="about" class="about-section pb-4">
+          <section id="about" class="about pb-4">
             <div class="container">
               <div class="abouts"
                     v-for="(aboutMe, index) of abouts">
                 <div class="row">
                   <div class="image-container p-5 col-md-6 col-12 wow bounceInRight">
-                    <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1" class="img-fluid">
+                    <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1" class="me img-fluid">
                   </div>
                   <div class="col-md-6 col-12 mt-md-5 mt-0 p-5">
+                    <h3>Hello World ;)</h3>
                     <div class="row align-content-center wow bounceInLeft">
                       <h2>I am Roman Matviy! <span>A twenty five year old designer from NY.</span></h2>
                       <p>I have graduated with a Bachelor degree of Graphic &amp; Web Design, from the University of Ukraine. I have a passion for creating challenging, intuitive and beautiful products.</p>
@@ -264,9 +157,10 @@ $(".progress-bar").each(function(i) {
                         facebook: <strong class="m-2 pb-2">{{ aboutMe.facebook }}</strong>
                       </p>
                     </div>
-                    <!-- <p>test</p> -->
-                    <div class="my-signature">
-                      <img src="img/sign.png" alt="sign" class="img-fluid">
+                    <div class="row justify-content-end">
+                      <div class="my-signature col-3 wow zoomIn m-3">
+                        <img src="img/sign1.png" alt="sign" class="img-fluid">
+                      </div>
                     </div>
                     <div class="download-button wow tada">
                       <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-cloud-download"></i> Download CV</a>
@@ -277,30 +171,6 @@ $(".progress-bar").each(function(i) {
               </div>
             </div>
           </section>
-        </header>
-
-<!-- <div class="intro">
-<div class="tt-text-intro">
-<h1 class="tt-headline letters type">
-
-<span>I'm </span>
-<span class="tt-words-wrapper selected">
-<b class="is-hidden" style="opacity: 1;"><i class="out">J</i><i class="out">o</i><i class="out">h</i><i class="out">n</i><i class="out">&nbsp;</i><i class="out">D</i><i class="out">o</i><i class="out">e</i></b>
-<b style="opacity: 1;" class="is-hidden"><i class="out">P</i><i class="out">r</i><i class="out">o</i><i class="out">f</i><i class="out">e</i><i class="out">s</i><i class="out">s</i><i class="out">i</i><i class="out">o</i><i class="out">n</i><i class="out">a</i><i class="out">l</i></b>
-<b style="opacity: 1;" class="is-visible"><i class="in">M</i><i class="in">i</i><i class="in">n</i><i class="in">i</i><i class="in">m</i><i class="in">a</i><i class="in">l</i><i class="in">i</i><i class="in">s</i><i class="in">t</i></b>
-<b style="opacity: 1;" class="is-hidden"><i class="out">P</i><i class="out">a</i><i class="out">s</i><i class="out">s</i><i class="out">i</i><i class="out">o</i><i class="out">n</i><i class="out">a</i><i class="out">t</i><i class="out">e</i></b>
-</span>
-</h1>
-</div>
-<span class="tt-sub-intro">Product designer</span>
-<ul class="list-inline social-link">
-<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-<li><a href="#"><i class="fa fa-behance"></i></a></li>
-<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-</ul>
-</div> -->
 
       <section class="skillset-section pt-5 pb-5">
         <div class="container">
@@ -432,10 +302,7 @@ $(".progress-bar").each(function(i) {
                 <div class="progress-value">{{ language.num }}%</div>
               </div>
             </div>
-
-
-
-
+          </div>
         </div>
       </section>
 
@@ -845,8 +712,8 @@ $(".progress-bar").each(function(i) {
                 <div class="w-100"></div>
                 <img src="img/1012.jpg" class="test img-fluid" alt="">
               </div>
-              <div class="url wow slideInLeft">
-              <h2>{{ project.name }}</h2>
+              <div class="info">
+                <h2>{{ project.name }}</h2>
                 <a :href="'http://' + project.url">{{ project.url }}</a>
                 <br>
                 <a :href="project.github">Source</a>
