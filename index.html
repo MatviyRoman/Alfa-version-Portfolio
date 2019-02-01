@@ -44,6 +44,35 @@
 
     <script src="js/wow.min.js"></script>
     <script>new WOW().init();</script>
+    <!-- <script>var delay = 500;
+$(".progress-bar").each(function(i) {
+  $(this).delay(delay * i).animate({
+    width: $(this).attr('aria-valuenow') + '%'
+  }, delay);
+
+  $(this).prop('Counter', 0).animate({
+    Counter: $(this).text()
+  }, {
+    duration: delay,
+    // easing: 'swing',
+    step: function(now) {
+      $(this).text(Math.ceil(now) + '%');
+    }
+  });
+});</script> -->
+<!-- <script>$(document).ready(function(){
+    $('.progress-title > b').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 1500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});</script> -->
 
   </head>
   <body>
@@ -204,11 +233,11 @@
             <div class="container">
               <div class="abouts"
                     v-for="(aboutMe, index) of abouts">
-                <div class="row justify-content-between">
-                  <div class="image-container m-5 col-4 wow bounceInRight">
+                <div class="row">
+                  <div class="image-container p-5 col-md-6 col-12 wow bounceInRight">
                     <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1" class="img-fluid">
                   </div>
-                  <div class="col-5 mt-5 pt-5">
+                  <div class="col-md-6 col-12 mt-md-5 mt-0 p-5">
                     <div class="row align-content-center wow bounceInLeft">
                       <h2>I am Roman Matviy! <span>A twenty five year old designer from NY.</span></h2>
                       <p>I have graduated with a Bachelor degree of Graphic &amp; Web Design, from the University of Ukraine. I have a passion for creating challenging, intuitive and beautiful products.</p>
@@ -239,7 +268,7 @@
                     <div class="my-signature">
                       <img src="assets/images/sign.png" alt="">
                     </div>
-                    <div class="download-button">
+                    <div class="download-button wow tada">
                       <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-cloud-download"></i> Download CV</a>
                       <a class="btn btn-default btn-lg" href="#"><i class="fa fa-briefcase"></i> Hire Me</a>
                     </div>
@@ -249,7 +278,6 @@
             </div>
           </section>
         </header>
-
 
 <!-- <div class="intro">
 <div class="tt-text-intro">
@@ -286,7 +314,7 @@
                     v-for="(frontEnd, index) of frontEnds">
                 <strong class="m-2 pb-2">{{ frontEnd.name }}</strong>
                 <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" :style="{ width: frontEnd.num + '%' }" aria-valuenow="frontEnd.num" aria-valuemin="0" aria-valuemax="100" :data-color="frontEnd.num"><b>{{ frontEnd.num }}</b> %</div>
+                  <div class="progress-bar" role="progressbar" :style="{ width: frontEnd.num + '%' }" aria-valuenow="frontEnd.num" aria-valuemin="0" aria-valuemax="100" :data-color="frontEnd.num"><b class="number">{{ frontEnd.num }}</b> %</div>
                 </div>
               </div>
             </div>
@@ -370,16 +398,16 @@
                     v-for="(cms, index) of cmss">
                 <strong class="m-2">{{ cms.name }}</strong>
                 <div class="progress mb-3">
-                  <div class="progress-bar" role="progressbar" :style="{ width: cms.num + '%' }" aria-valuenow="cms.num" aria-valuemin="0" aria-valuemax="100" :data-color="cms.num"><b>{{ cms.num }}</b> %</div>
+                  <div class="progress-bar pbp" role="progressbar" :style="{ width: cms.num + '%' }" aria-valuenow="cms.num" aria-valuemin="0" aria-valuemax="100" :data-color="cms.num"><b>{{ cms.num }}</b> %</div>
                 </div>
               </div>
             </div>
           </div>
           <h3 class="section-title wow animated fadeInUp">Language</h3>
-          <div class="row justify-content-center mb-3">
-            <div class="Language col-lg-2 col-md-12 col-sm-11 col-12"
+          <!-- <div class="row justify-content-center mb-3">
+            <div class="language col-lg-2 col-md-12 col-sm-11 col-12"
                   v-for="(language, index) of languages">
-              <div :class="'c100 p' + language.num + ' dark'">
+              <div :class="'c100 p' + language.num + ' dark'" :data-color="language.num">
                 <span style="color: #fff">{{ language.num }}%</span>
                 <div class="slice">
                   <div class="bar"></div>
@@ -388,12 +416,63 @@
               </div>
               <strong class="m-2">{{ language.name }}</strong>
             </div>
-          </div>
+          </div> -->
+
+
+          <div class="col-md-3 col-sm-6">
+            <div class="language col-lg-2 col-md-12 col-sm-11 col-12"
+                  v-for="(language, index) of languages">
+              <div class="progress circle blue" :circle-color="language.num">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">{{ language.num }}%</div>
+              </div>
+            </div>
+
+
+
+
         </div>
       </section>
 
 
-      <!-- <div class="container">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="progress circle blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">90%</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="progress circle yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">75%</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+     <!--  <div class="container">
         <h3>Language</h3>
         <div class="row mb-3">
           <div class="Language col-lg-2 col-md-12 col-sm-11 col-12"
