@@ -19,6 +19,7 @@ header>section>.logo {
   border: 1px solid #fff;
   width: 75px;
   height: 75px;
+  /*position: absolute;*/
 }
 
 header>section>.logo h2 {
@@ -32,7 +33,7 @@ header>section>.logo h2 {
 
 header .cover-two {
   background-size: cover;
-  background: #222 url(../img/cover-2.jpg) no-repeat center;
+  background: #222 url(../img/background/22bg.jpg) no-repeat center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -68,8 +69,8 @@ header .clouds {
 }
 @keyframes cloudsLoop {
   0% {
-    /* -webkit-transform: translate3d(0, 0, 0); */
-    /* transform: translate3d(0, 0, 0); */
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
   }
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
@@ -77,9 +78,31 @@ header .clouds {
   }
 }
 
+a, .btn {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn {
+  border: 0;
+  border-bottom: 2px solid rgba(10, 10, 10, 0.10);
+  border-radius: 2px;
+}
+
 section h3 {
   color: #fff;
   font-size: 30px;
+}
+
+.section-title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  position: relative;
+  text-align: center;
 }
 
 .about {
@@ -132,15 +155,15 @@ section h3 {
     opacity: .5
 }
 
-.icon {
+/*.icon {
     height: 50px;
     width: 50px;
     border-radius: 100%;
     border: 1px solid #fff;
-    background: #00f;
-    /*opacity: 0.5;*/
+    background: #00f;*/
+    /*opacity: 0.5;
     margin-right: 5px;
-}
+}*/
 
 .fab,
 .far {
@@ -168,16 +191,6 @@ section h3 {
   background-color: #1a1e23;
   color: #fff;
 }
-
-
-.section-title {
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 50px;
-  position: relative;
-  text-align: center;
-}
-
 
 
 
@@ -538,20 +551,7 @@ footer {
 
 
 
-/*@import "bourbon";*/
 
-/* Demo Styles */
-
-#content {
-  margin: 0 auto;
-  padding-bottom: 50px;
-  width: 80%;
-  max-width: 978px;
-}
-
-h1 {
-  font-size: 40px;
-}
 
 /* The Loader */
 
@@ -563,71 +563,10 @@ h1 {
   height: 100%;
   z-index: 10;
   overflow: hidden;
-
-  /*.no-js & {
+ /* // Modernizr no-js fallback
+  .no-js & {
     display: none;
   }*/
-}
-
-
-#loader {
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #16a085;
-  animation: spin 1.7s linear infinite;
-  z-index: 11;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #e74c3c;
-    animation: spin-reverse .6s linear infinite;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #f9c922;
-    animation: spin 1s linear infinite;
-  }
-}
-
-
-@include keyframes(spin) {
-  0% {
-    @include transform(rotate(0deg));
-  }
-  100% {
-    @include transform(rotate(360deg));
-  }
-}
-
-@include keyframes(spin-reverse) {
-  0% {
-    @include transform(rotate(0deg));
-  }
-  100% {
-    @include transform(rotate(-360deg));
-  }
 }
 
 #loader-wrapper .loader-section {
@@ -659,19 +598,18 @@ h1 {
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
-.loaded #loader {
+/*.loaded #loader {
   opacity: 0;
   transition: all 0.3s ease-out;
-}
+}*/
 
-.loaded #loader-wrapper {
+/*.loaded #loader-wrapper {
   visibility: hidden;
   transform: translateY(-100%);
   transition: all 0.3s 1s ease-out;
-}
+}*/
 
-.hot {background: #f00; color: #fff;}
-.cold {background: #00f; color: #fff;}
+
 
 
 /*body{
@@ -759,12 +697,6 @@ content .lesson video {
   position: relative;
   z-index: 111;
 }
-
-/*.test {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}*/
 
 .test {
   margin-top: 10px;
