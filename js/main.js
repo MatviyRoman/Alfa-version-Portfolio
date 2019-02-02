@@ -1,10 +1,9 @@
-$(document).ready(function() {
+// Fakes the loading setting a timeout
 
-  // Fakes the loading setting a timeout
+$(document).ready(function() {
     setTimeout(function() {
         $('body').addClass('loaded');
-    }, 3000);
-
+    }, 2500);
 });
 
 
@@ -187,7 +186,7 @@ language(
 
 language(
 	'Polish',
-	'28',
+	'25',
 	'img/1.jpg',
 	'zip/wwwvuejs2.zip'),
 
@@ -207,26 +206,20 @@ language(
 
 
 // Links Start
-const link = (name, num, img, link) => ({name, num, img, link});
+const link = (name, url) => ({name, url});
 
 const links = [
 link(
-	'English',
-	'35',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'PSD Models',
+	'http://psd.matviy.pp.ua'),
 
 link(
-	'Ukrainian',
-	'100',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'Emmet-Cheat',
+	'http://cheat.matviy.pp.ua'),
 
 link(
-	'Russian',
-	'80',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'Tools & Programms',
+	'https://github.com/MatviyRoman/Tools-Programm')]
 // Links End
 
 
@@ -410,7 +403,7 @@ program(
 
 
 // Project Start
-const project = (date, url, github, name, desc, skills, img) => ({date, url, github, name, desc, skills, img});
+const project = (date, url, github, name, desc, skills, img, active) => ({date, url, github, name, desc, skills, img, active});
 
 const projects = [
 project(
@@ -420,7 +413,8 @@ project(
 	'Camel Heal',
 	`We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1'),
+	'https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1',
+	'active'),
 
 project(
 	'21 Dec 2018',
@@ -578,7 +572,7 @@ project(
 
 
 new Vue ({
-	el: '#myPortfolio',
+	el: '#MatviyRoman',
 	// template:
  //  `<div :style="{width: '55%'}">t</div>`,
 	data: {
@@ -677,21 +671,6 @@ new Vue ({
 
 
 
-//    var max_temp = 50, // set maximum expected temperature
-// min_temp = -10, // set minimum temperature
-// temp_range = max_temp - min_temp, // calculate range
-// temp_rating = ((temp - min_temp) / temp_range) * 255 // express value in terms of the range multiplied by 255
-// red = temp_rating, // more temp = more red
-// blue = 255 - temp_rating; // more temp = less blue
-
-// $(document).ready(function(){
-    // $('.progress-bar')​.has(function(){
-        // if($('.progress-bar').has() < 47)
-        //     $(this).removeAttr("class").addClass("cold");
-        // else
-        //     $(this).removeAttr("class").addClass("hot");
-    // })​
-// });
 
 
 
@@ -734,10 +713,51 @@ $(document).ready(function(){
   	});
 });
 
+// $(document).ready(function(){
+// 	var mc = {
+// 	    '0-19'     : 'pink',
+// 	    '20-39'    : 'yellow',
+// 	    '40-59'    : 'green',
+// 	    '60-79'    : 'green',
+// 	    '80-100'   : 'blue'
+// 	};
+
+// 	function between(x, min, max) {
+// 	  	return x >= min && x <= max;
+// 	}
+
+// 	var dc;
+// 	var first;
+// 	var second;
+// 	var th;
+
+// 	$('.circle').each(function(index){
+
+//     	th = $(this);
+
+//     	dc = parseInt($(this).attr('circle-color'),10);
+
+
+//       	$.each(mc, function(name, value){
+
+// 	        first = parseInt(name.split('-')[0],10);
+// 	        second = parseInt(name.split('-')[1],10);
+
+// 	        // console.log(between(dc, first, second));
+
+// 	        if( between(dc, first, second) ){
+// 	          	th.addClass(value);
+// 	        }
+//       	});
+//   	});
+// });
+
+
+
 $(document).ready(function(){
 	var mc = {
-	    '0-19'     : 'pink',
-	    '20-39'    : 'yellow',
+	    '0-19'     : 'red',
+	    '20-39'    : 'orange',
 	    '40-59'    : 'green',
 	    '60-79'    : 'green',
 	    '80-100'   : 'blue'
@@ -752,7 +772,7 @@ $(document).ready(function(){
 	var second;
 	var th;
 
-	$('.circle').each(function(index){
+	$('.circular-chart, .circle').each(function(index){
 
     	th = $(this);
 
@@ -772,6 +792,8 @@ $(document).ready(function(){
       	});
   	});
 });
+
+
 
 
 // var delay = 500;
@@ -812,13 +834,13 @@ $(document).ready(function(){
 
 
 
-$('.skillset-section').hover(
-   function(){
-       	$('.progress-bar').addClass('hover');
-       	$('.progress-bar').removeClass('hide');
-        },
-   function(){
-       	$('.progress-bar').removeClass('hover');
-       	$('.progress-bar').addClass('hide');
-   }
-)
+// $('.skillset-section').hover(
+//    function(){
+//        	$('.progress-bar').addClass('hover');
+//        	$('.progress-bar').removeClass('hide');
+//         },
+//    function(){
+//        	$('.progress-bar').removeClass('hover');
+//        	$('.progress-bar').addClass('hide');
+//    }
+// )

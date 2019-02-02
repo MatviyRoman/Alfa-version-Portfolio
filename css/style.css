@@ -1,4 +1,29 @@
-​body {
+​a, .btn {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn {
+  border: 0;
+  border-bottom: 2px solid rgba(10, 10, 10, 0.10);
+  border-radius: 2px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+body {
   font-family: 'Merriweather', serif;
   -webkit-user-select: none; /* Safari 3.1+ */
   -moz-user-select: none; /* Firefox 2+ */
@@ -32,13 +57,12 @@ header>section>.logo h2 {
 }
 
 header .cover-two {
-  background-size: cover;
   background: #222 url(../img/background/22bg.jpg) no-repeat center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  padding-top: 21%;
-  padding-bottom: 21%;
+  padding-top: 25%;
+  padding-bottom: 25%;
   position: relative;
   overflow-x: hidden;
 }
@@ -50,6 +74,7 @@ header .clouds {
     width: 250.625em;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     /*height: 100vh;*/
     background: url(../img/clouds.png) 0px 100% repeat-x;
     -webkit-animation: cloudsLoop 80s linear infinite;
@@ -78,19 +103,72 @@ header .clouds {
   }
 }
 
-a, .btn {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+.navbar {
+  background-color: rgba(255, 255, 255, .1) !important;
+  position: absolute;
+  z-index: 9;
 }
 
-.btn {
-  border: 0;
-  border-bottom: 2px solid rgba(10, 10, 10, 0.10);
-  border-radius: 2px;
+/* The Loader */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222;
+  z-index: 10;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+  transform: translateY(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  transform: translateY(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+/*.loaded #loader-wrapper .loader-section.section-left {
+  transform: translateX(-50%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  transform: translateX(50%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}*/
+
+/*.loaded #loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}*/
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s 1s ease-out;
+}
+
 
 section h3 {
   color: #fff;
@@ -106,7 +184,8 @@ section h3 {
 }
 
 .about {
-  background: #222;
+  background: #1B2C3C;
+  /*background: #222;*/
   color: #fbdb65;
 }
 
@@ -124,6 +203,32 @@ section h3 {
   position: absolute;
   top: 50%;
   left: 100%;
+}
+
+.languages {
+  color: #fff;
+  /*background: #222 url(../img/languages/circle-1.png) no-repeat left;*/
+   background: #222;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 50 0;
+  background-repeat: no-repeat;
+  /*-webkit-background-size: cover;
+  background-size: cover;*/
+ /* padding-top: 25%;
+  padding-bottom: 25%;*/
+}
+
+.heart {
+  font-size: 150px;
+  color: #e00;
+  animation: beat .7s infinite alternate;
+  transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+  to { transform: scale(1.2); }
 }
 
 
@@ -553,64 +658,6 @@ footer {
 
 
 
-/* The Loader */
-
-#loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  overflow: hidden;
- /* // Modernizr no-js fallback
-  .no-js & {
-    display: none;
-  }*/
-}
-
-#loader-wrapper .loader-section {
-  position: fixed;
-  top: 0;
-  width: 51%;
-  height: 100%;
-  background: #222;
-  z-index: 10;
-}
-
-#loader-wrapper .loader-section.section-left {
-  left: 0;
-}
-
-#loader-wrapper .loader-section.section-right {
-  right: 0;
-}
-
-/* Loaded styles */
-
-.loaded #loader-wrapper .loader-section.section-left {
-  transform: translateX(-100%);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-.loaded #loader-wrapper .loader-section.section-right {
-  transform: translateX(100%);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-/*.loaded #loader {
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}*/
-
-/*.loaded #loader-wrapper {
-  visibility: hidden;
-  transform: translateY(-100%);
-  transition: all 0.3s 1s ease-out;
-}*/
-
-
-
 
 /*body{
     background-color:black;
@@ -647,28 +694,6 @@ header {
 	color: #FEDD41;
 }
 
-/*header span {
-	color: #FF0000;
-}*/
-
-content {
-	color: #000;
-}
-
-content .lesson {
-	border-bottom: 1px solid #808080;
-}
-
-content .lesson span {
-	color: #DF8618;
-	font-weight: bold;
-}
-
-content .lesson video {
-	border: 1px solid #000;
-	border-radius: 20px;
-}
-
 @media only screen and (max-width: 991px) {
 	content #desc {
 		position: absolute;
@@ -700,8 +725,6 @@ content .lesson video {
 
 .test {
   margin-top: 10px;
-    /*width: 351px;
-    height: 196px;*/
     position: absolute;
     top: 0;
 }
@@ -710,7 +733,7 @@ content .lesson video {
 
 
 
-.circle {
+/*.circle {
     width: 150px;
     height: 150px;
     line-height: 150px;
@@ -858,4 +881,63 @@ content .lesson video {
 }
 @media only screen and (max-width: 990px){
     .progress{ margin-bottom: 20px; }
+}*/
+
+
+/*Progress circle 1*/
+<style>
+  .flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
 }
+
+.single-chart {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+</style>
