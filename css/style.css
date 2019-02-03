@@ -205,8 +205,13 @@ section h3 {
   left: 100%;
 }
 
+.progress {
+  background-color: #ffffff12;
+}
+
 .languages {
   color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, .5);
   /*background: #222 url(../img/languages/circle-1.png) no-repeat left;*/
    background: #222;
   -webkit-background-size: contain;
@@ -219,11 +224,38 @@ section h3 {
   padding-bottom: 25%;*/
 }
 
-.heart {
-  font-size: 150px;
+.projects {
+  color: #222;
+}
+
+.projects h3 {
+  color: #222;
+}
+
+/*.heart {
+  /*font-size: 150px;
+  height: 200px;
+  width: 200px;
   color: #e00;
   animation: beat .7s infinite alternate;
   transform-origin: center;
+}*/
+
+.heart {
+  /*height: 95px;
+  width: 95px;*/
+  -webkit-animation: rotation 50s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
 }
 
 /* Heart beat animation */
@@ -886,10 +918,10 @@ header {
 
 /*Progress circle 1*/
 <style>
-  .flex-wrapper {
+/*  .flex-wrapper {
   display: flex;
   flex-flow: row nowrap;
-}
+}*/
 
 .single-chart {
   width: 33%;
@@ -905,7 +937,7 @@ header {
 
 .circle-bg {
   fill: none;
-  stroke: #eee;
+  stroke: #ffffff12;
   stroke-width: 3.8;
 }
 
@@ -923,21 +955,22 @@ header {
 }
 
 .circular-chart.orange .circle {
-  stroke: #ff9f00;
+  stroke: #ffc107;
 }
 
 .circular-chart.green .circle {
-  stroke: #4CC790;
+  stroke: #28a745;
 }
 
 .circular-chart.blue .circle {
-  stroke: #3c9ee5;
+  stroke: #007bff;
 }
 
 .percentage {
-  fill: #666;
+  /*fill: #666;*/
+  fill: #b3bc20;
   font-family: sans-serif;
-  font-size: 0.5em;
+  font-size: 6px;
   text-anchor: middle;
 }
 </style>

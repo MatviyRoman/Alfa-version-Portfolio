@@ -99,7 +99,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">My Certificate</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Links</a>
+                  <a class="dropdown-item" href="#">My Links</a>
                 </div>
               </li>
               </ul>
@@ -296,8 +296,6 @@
               </div>
             </div>
 
-
-
             <div id="skill" class="col-md-4 col-12 mt-5">
               <div class="section-title wow animated fadeInUp mb-3">
                 <h3>CMS</h3>
@@ -334,10 +332,12 @@
           <!-- Progress circle 1 -->
           <div class="languages pt-5 pb-5">
             <div class="container-fluid">
-              <h3 class="section-title wow animated fadeInUp mb-3">Languages</h3>
-              <div class="flex-wrapper">
-              <div class="row justify-content-center"><img src="img/languages/heart-1.png" alt="heart" class="img-fluid heart">
-                <div class="single-chart language col-lg-2 col-md-12 col-sm-11 col-12"
+              <h3 class="section-title wow animated fadeInUp mb-4">Languages</h3>
+              <div class="row">
+                <div class="col ml-4 align-self-start">
+                  <img src="img/languages/circle-2.png" alt="heart" class="img-fluid heart">
+                </div>
+                <div class="col single-chart language"
                   v-for="(language, index) of languages">
                   <svg viewBox="0 0 36 36" class="circular-chart" :circle-color="language.num">
                     <path class="circle-bg"
@@ -351,13 +351,13 @@
                         a 15.9155 15.9155 0 0 1 0 31.831
                         a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
-                    <text x="18" y="20.35" class="percentage">{{ language.num }}%</text>
+                    <text x="18" y="20.35" class="percentage">{{ language.name }}</text>
+                    <!-- <h3 class="align-content-end">{{ language.num }}%</h3> -->
                   </svg>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
 
 
@@ -386,34 +386,70 @@
         </div>
       </div> -->
 
-
-<div id="carouselExampleIndicators" class="carousel carousel-fade" data-ride="carousel">
-  <!-- <img src="img/demo-231.png" class="col-12 img-fluid" style="position: absolute; z-index: 666;"> -->
-  <!-- <ol class="carousel-indicators">
-    <li v-for="(project, index) of projects" data-target="#carouselExampleIndicators" data-slide-to="0" :class="project.active"></li>
-  </ol> -->
-  <ol class="carousel-indicators">
-    <li v-for="(project, index) of projects" data-target="#carouselExampleIndicators" :data-slide-to="index" :class="project.active"></li>
-  </ol>
-  <div class="carousel-inner">
-    <!-- <img src="img/demo-231.png" class="col-12 img-fluid" style="position: absolute; z-index: 666; width: 1596px; height: 1380px;"> -->
-    <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
-      <img src="img/background/10bg.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{ project.name }}</h5>
-        <p>{{ project.url }}</p>
+<section class="projects pt-5 pb-5 mb-5">
+  <div class="container-fluid">
+    <h3 class="section-title wow animated fadeInUp mb-4">Projects</h3>
+    <div class="row justify-content-center mt-5 mb-5">
+      <div id="carouselExampleIndicators" class="col-lg-6 col-md-8 col-sm-10 col-11 carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li v-for="(project, index) of projects" data-target="#carouselExampleIndicators" :data-slide-to="index" :class="project.active"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- <div class="carousel-inner" style="z-index: 555; background: url(img/head.png) no-repeat; background-position: center; -webkit-background-size: cover;
+          background-size: cover;"> -->
+          <img src="img/head1.png" class="d-block w-100" style="height: 100%; position: absolute; z-index: 8;">
+          <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
+            <!-- <div class="img" :style="`
+              background-image: url(img/background/` + project.img + `);
+              background-position: center;
+              -webkit-background-size: cover;
+              background-size: cover;
+              width: 95%;
+              height: 45vh;
+              margin-left: 4%;
+              z-index: 4444;`">
+            </div> -->
+            <div class="img" :style="`
+              background-position: center;
+              -webkit-background-size: cover;
+              background-size: cover;
+              width: 95%;
+              height: 47vh;
+              margin-left: 4%;
+              z-index: 4444;`">
+              <img :src="'img/background/' + project.img" alt="" class="d-block w-100">
+            </div>
+            <!-- <img :src="'img/background/' + project.img" style="min-width: 800px; min-height: 417px; height: 380px; width: 700px;" class="d-block w-100 img-fluid" :alt="project.name"> -->
+            <!-- <img :src="'img/background/' + project.img" style="z-index: 10;" class="d-block w-100 ml-3 pr-3" :alt="project.name"> -->
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ project.name }}</h5>
+              <p>{{ project.url }}</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <div class="w-100"></div>
+      </div>
+      <div class="w-100"></div>
+      <img src="img/foot.png" class="col-lg-6 col-md-8 col-sm-10 col-11 d-block w-100">
+      <div class="w-100"></div>
+        <li v-for="(project, index) of projects" data-target="#carouselExampleIndicators" :data-slide-to="index" :class="project.active"></li>
+        <b v-for="(project, index) of projects" data-target="#carouselExampleIndicators" :data-slide-to="index" :class="project.active">{{ project.name }}<br><div class="w-100"></div></b>
+      <div class="e" v-for="(project, index) of projects">
+        <h2>{{ project.name }}</h2>
+        <br>
+        <p>{{ project.skills }}</p>
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+</section>
 
 
       <!-- <div class="projects">
