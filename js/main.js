@@ -413,7 +413,7 @@ project(
 	'Camel Heal',
 	`We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/38985160_681453705552441_7261323494485393408_n.jpg?_nc_cat=101&_nc_ht=scontent-frx5-1.xx&oh=718eabfa27325b8dd00680afdf6023de&oe=5CBBECB1',
+	'1bg.jpg',
 	'active'),
 
 project(
@@ -422,7 +422,9 @@ project(
 	'https://github.com/MatviyRoman/HOME',
 	'Home',
 	'Зверстати у відповідності до прикріпленого макету. Необхідні технології: Сss framework: bootstrap 3 або 4 Js framework : Jquery Валідний код та адаптація під мобільні пристрої.',
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
+	'2bg.jpg',
+	''),
 
 project(
 	'15 Dec 2018',
@@ -430,7 +432,9 @@ project(
 	'http://magazino.ga',
 	'magazino.ga',
 	'My Home Project. Wordpress. My design with using plugin Elementor',
-	'HTML5, CSS3, Wordpress, plugin Elementor, Landing Page'),
+	'HTML5, CSS3, Wordpress, plugin Elementor, Landing Page',
+	'3bg.jpg',
+	''),
 
 project(
 	'8 Dec 2018',
@@ -439,7 +443,8 @@ project(
 	'Pantomax',
 	'Сделать верстку с макета и адаптировать ее под мобильные устройства. Ссылка прилагается на макет, адаптивную верстку необходимо сделать на свое усмотрение.',
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'3'),
+	'4bg.jpg',
+	''),
 
 project(
 	'7 Dec 2018',
@@ -447,7 +452,9 @@ project(
 	'https://github.com/MatviyRoman/todo-list',
 	'todo-list',
 	`Техническое задание: Реализовать todo list (список дел). Функционал: вывод списка задач из базы данных, создание новой задачи, редактирование задачи, удаление задачи. Клиентская часть. Для всего использовать Angular Material Design. Основной компонент приложения - список задач. При открытии страницы должен показываться лоадер (задачи загружаются…). 1.1 Если задач в базе нет, вывести сообщение об этом и кнопку “создать первую задачу”. 1.2 Если есть задачи, список задач в виде таблицы (столбцы - id задачи, текст задачи, дата создания, действия с задачей). Кнопка добавления новой задачи над таблицей. При нажатии на кнопку добавления задачи открывается боковое окно (drawer) с заголовком (toolbar). 2.1 В боковом окне будет расположено текстовое поле + кнопка “добавить задачу”. 2.2 Кнопка должна быть неактивной, если поле пустое. 2.3 При добавлении задачи сначала должен показываться лоадер (подождите, идёт добавление), а затем окно должно закрываться. В случае ошибки должно появляться сообщение (в виде snackbar). 2.4 Добавить ошибку в случае, если введенный текст содержит символ “!”. Т.е. если пользователь ввёл текст “Выполнить испытательное задание!”, то при попытке создать задачу должен сначала показаться лоадер, а затем снова поле с кнопкой + в snackbar должно появиться сообщение с ошибкой. 2.5 После добавления задачи она также добавляется в таблицу на странице. При наведении на строку задачи в таблице, возле текста задачи появляется иконка редактирования (ручка). 3.1 При нажатии на кнопку редактирования открывается модальное окно (dialog) с текстовым полем и кнопками “Отмена” и “Сохранить”. 3.2 При нажатии на “Сохранить” сначала показывается лоадер (progress bar), затем окно закрывается и текст задачи в таблице меняется. В последней колонке (действия с задачей) должна быть кнопка-иконка корзины. 4.1 При нажатии открывается модальное окно (dialog) с подтверждением удаления. 4.2 При подтверждении удаления сначала показывается лоадер (progress bar), затем окно закрывается и задачи удаляется из списка проекта.`,
-	'VueJS, HTML5, CSS3, Bootstrap 4, Responsive Design, Landing Page'),
+	'VueJS, HTML5, CSS3, Bootstrap 4, Responsive Design, Landing Page',
+	'5bg.jpg',
+	''),
 
 project(
 	'27 Nov 2018',
@@ -455,7 +462,9 @@ project(
 	'https://github.com/MatviyRoman/Travel-Agency',
 	'Travel Agency',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
+	'6bg.jpg',
+	''),
 
 project(
 	'15 Nov 2018',
@@ -463,7 +472,9 @@ project(
 	'https://github.com/MatviyRoman/Roman.Matviy.CV',
 	'Roman.Matviy.CV',
 	'Responsive design with psd layouts Roman.Matviy.CV',
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page',
+	'7bg.jpg',
+	''),
 
 project(
 	'14 Nov 2018',
@@ -471,7 +482,9 @@ project(
 	'https://github.com/MatviyRoman/Learn-Theory-of-JS',
 	'Learn Theory of JS',
 	'Responsive design with psd layouts. Learn Theory of JS',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page',
+	'8bg.jpg',
+	''),
 
 project(
 	'10 Nov 2018',
@@ -479,7 +492,9 @@ project(
 	'https://github.com/MatviyRoman/Short-code-vue',
 	'Short code vue',
 	'Learn Theory of vue.js',
-	'VueJS, HTML5, CSS3'),
+	'VueJS, HTML5, CSS3',
+	'9bg.jpg',
+	''),
 
 project(
 	'10 Nov 2018',
@@ -487,7 +502,9 @@ project(
 	'https://github.com/MatviyRoman/Test-vue.js',
 	'Test vue.js',
 	'Learn Theory of vue.js',
-	'VueJS, HTML5, CSS3'),
+	'VueJS, HTML5, CSS3',
+	'10bg.jpg',
+	''),
 
 project(
 	'9 Nov 2018',
@@ -495,7 +512,9 @@ project(
 	'https://github.com/MatviyRoman/Old-my-resume',
 	'Old my resume',
 	'Learn Theory of vue.js',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page',
+	'11bg.jpg',
+	''),
 
 project(
 	'6 Nov 2018',
@@ -503,7 +522,9 @@ project(
 	'https://github.com/MatviyRoman/Startup.matviy.pp.ua',
 	'Startup',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
+	'20bg.jpg',
+	''),
 
 project(
 	'1 Nov 2018',
@@ -511,7 +532,9 @@ project(
 	'https://github.com/MatviyRoman/AngularJS/tree/master/angular2-intro',
 	'AngularJS',
 	'AngularJS',
-	'HTML5, CSS3, AngularJS'),
+	'HTML5, CSS3, AngularJS',
+	'12bg.jpg',
+	''),
 
 project(
 	'26 Oct 2018',
@@ -519,7 +542,9 @@ project(
 	'https://github.com/MatviyRoman/example.matviy.pp.ua',
 	'example',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 3, Responsive Design',
+	'13bg.jpg',
+	''),
 
 project(
 	'26 Oct 2018',
@@ -527,7 +552,9 @@ project(
 	'https://github.com/MatviyRoman/HTML-Tables-Generation',
 	'HTML Tables Generation',
 	'HTML Tables Generation. My Home Project. Responsive design with psd layouts HTML Tables Generation',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page',
+	'14bg.jpg',
+	''),
 
 project(
 	'25 Oct 2018',
@@ -535,7 +562,9 @@ project(
 	'https://github.com/MatviyRoman/mytesting.ga',
 	'mytesting.ga',
 	'HTML Tables Generation. My Home Project. Responsive design with psd layouts HTML Tables Generation',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
+	'15bg.jpg',
+	''),
 
 project(
 	'10 Oct 2018',
@@ -543,7 +572,9 @@ project(
 	'https://github.com/MatviyRoman/Creatives-Project',
 	'Creatives',
 	'Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
+	'16bg.jpg',
+	''),
 
 project(
 	'25 Jan 2019',
@@ -551,7 +582,9 @@ project(
 	'https://github.com/MatviyRoman/www.arnika.od.ua',
 	'МЦ Арника arnika.od.ua',
 	'Було завдання з оригінального сайту зробити Responsive Design. Оригінал з того, що я робив можна глянути тут http://arnika.matviy.pp.ua/original/index.html',
-	'HTML5, CSS3, Bootstrap 4, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 4, Responsive Design',
+	'17bg.jpg',
+	''),
 
 project(
 	'7 Oct 2018',
@@ -559,7 +592,9 @@ project(
 	'https://github.com/MatviyRoman/My-Modal-Window',
 	'Window modal test',
 	'Responsive design with psd layouts. This is my window modal test.',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design'),
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
+	'18bg.jpg',
+	''),
 
 project(
 	'24 Sep 2018',
@@ -567,7 +602,9 @@ project(
 	'https://github.com/MatviyRoman/Bisines-Company-Project',
 	'Bisines-Company',
 	'My project building with bootstrap &amp; jQuery. Responsive design with psd layouts',
-	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design')]
+	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
+	'19bg.jpg',
+	'')]
 // Project End
 
 
@@ -679,8 +716,8 @@ $(document).ready(function(){
 	    '0-19'     : 'bg-danger',
 	    '20-39'    : 'bg-warning',
 	    '40-59'    : 'bg-info',
-	    '60-79'    : 'bg-success',
-	    '80-100'   : ''
+	    '60-79'    : '',
+	    '80-100'   : 'bg-success'
 	};
 
 	function between(x, min, max) {
@@ -758,9 +795,9 @@ $(document).ready(function(){
 	var mc = {
 	    '0-19'     : 'red',
 	    '20-39'    : 'orange',
-	    '40-59'    : 'green',
+	    '40-59'    : 'blue',
 	    '60-79'    : 'green',
-	    '80-100'   : 'blue'
+	    '80-100'   : 'green'
 	};
 
 	function between(x, min, max) {
