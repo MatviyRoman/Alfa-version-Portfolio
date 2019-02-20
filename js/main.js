@@ -8,6 +8,21 @@ $(document).ready(function() {
 
 
 
+// WOW Animated
+// wow = new WOW({
+// 	boxClass:     'wow',      // default
+// 	animateClass: 'animated', // default
+// 	offset:       0,          // default
+// 	mobile:       true,       // default
+// 	live:         true        // default
+// })
+// wow.init();
+
+new WOW().init();
+
+
+
+
 // AboutMe Start
 const aboutMe = (title, fullname, location, nationality, email, skype, phone, mobile, github, linkedin, facebook) => ({title, fullname, location, nationality, email, skype, phone, mobile, github, linkedin, facebook});
 
@@ -34,6 +49,114 @@ aboutMe(
 	'Vue.js, Node.js, Angular 2 / TypeScript, React, PHP, MySQL, AJAX',
 	'punctual, without bad habits, persistent and purposeful, responsible and executive, prone to analytical activity, prone to analytical activity')]
 // AboutMe End
+
+
+
+// Additional materials Start
+const material = (sectionTitle, urlName1, url1, urlName2, url2, urlName3, url3, urlName4, url4, urlName5, url5, urlName6, url6) => ({sectionTitle, urlName1, url1, urlName2, url2, urlName3, url3, urlName4, url4, urlName5, url5, urlName6, url6});
+
+const materials = [
+material(
+	'Історія інтернету:',
+	'en.wikipedia.org/wiki/History_of_the_Internet',
+	'https://en.wikipedia.org/wiki/History_of_the_Internet'),
+
+material(
+	'Історія вебу:',
+	'www.evolutionoftheweb.com',
+	'http://www.evolutionoftheweb.com/',
+	'en.wikipedia.org/wiki/History_of_the_World_Wide_Web',
+	'https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web'),
+
+material(
+	'Принципи роботи сучасних веб-браузерів. Як працює браузер(ru):',
+	'www.html5rocks.com/ru/tutorials/internals/howbrowserswork/#Parsing_general',
+	'https://www.html5rocks.com/ru/tutorials/internals/howbrowserswork/#Parsing_general'),
+
+material(
+	'Про W3C:',
+	'www.w3.org/Consortium/facts',
+	'http://www.w3.org/Consortium/facts'),
+
+material(
+	'Ресурс, де зібрано всі новини у світі веб-розробки:',
+	'uptodate.frontendrescue.org',
+	'https://uptodate.frontendrescue.org/'),
+
+material(
+	'Як працює DNS:',
+	'howdns.works/',
+	'https://howdns.works/'),
+
+material(
+	'Для перевірки підтримки браузером тих чи інших можливостей і стандартів існують спеціальні ресурси. Найбільш відомі:',
+	'caniuse.com',
+	'http://caniuse.com',
+	'html5please.com',
+	'http://html5please.com'),
+
+material(
+	'Online редактори коду:',
+	'JSFiddle',
+	'http://jsfiddle.net/',
+	'LiveWeave',
+	'http://liveweave.com/',
+	'CodePen.io',
+	'http://codepen.io',
+	'JsDo.it',
+	'http://jsdo.it/',
+	'Cloud9',
+	'https://c9.io/'),
+
+material(
+	'Offline редактори коду:',
+	'Notepad++',
+	'https://notepad-plus-plus.org/download/v6.8.3.html',
+	'Sublime Text3',
+	'http://www.sublimetext.com/',
+	'Sublime Keyboard Shortcuts',
+	'http://benmccormick.org/content/images/2014/Jun/Sublime_cheat_sheet.png',
+	'Brackets',
+	'http://brackets.io/',
+	'Atom',
+	'https://atom.io/'),
+
+material(
+	'IDE (Integrated Development Environment):',
+	'WebStorm',
+	'https://www.jetbrains.com/webstorm/',
+	'VisualStudio',
+	'https://www.visualstudio.com/'),
+
+material(
+	'Other:',
+	'MDN(HTML)',
+	'https://developer.mozilla.org/ru/docs/Web/Guide/HTML',
+	'MDN(CSS)',
+	'https://developer.mozilla.org/ru/docs/Web/CSS',
+	'CSS Tricks',
+	'https://css-tricks.com/',
+	'Шпаргалка зі списком всіх CSS стилів',
+	'http://media.mediatemple.netdna-cdn.com/',
+	'Learn Layout(en, es, fr, de, du, it, po, ru,)',
+	'http://learnlayout.com/',
+	'Frontender',
+	'http://frontender.info/'),
+
+material(
+	'JavaScript:',
+	'Learn Javascript',
+	'http://learn.javascript.ru'),
+
+material(
+	'jQuery:',
+	'Documentation english',
+	'http://api.jquery.com/',
+	'Documentation russian',
+	'http://jquery-docs.ru/',
+	'Шпаргалка',
+	'/pdf/jQuery-1_5-Visual-Cheat-Sheet.pdf')]
+// Additional materials End
 
 
 
@@ -88,31 +211,37 @@ backEnd(
 
 
 // Certificates Start
-const certificate = (date, name, cert, link) => ({date, name, cert, link});
+const certificate = (date, name, license, link) => ({date, name, license, link});
 
 const certificates = [
 certificate(
-	'(09/2018)',
-	'HTML Fundamentals',
-	'License 1014-10299461',
+	'18/02/2019',
+	'Basics of Web UI development / Основи Web UI розробки',
+	'36340060295e40e5b149e02866465b3d',
+	'https://courses.prometheus.org.ua:18090/cert/36340060295e40e5b149e02866465b3d'),
+
+certificate(
+	'09/2018',
+	'HTML Fundamentals course / Основи HTML розробки',
+	'1014-10299461',
 	'https://www.sololearn.com/Certificate/1014-10299461/pdf/'),
 
 certificate(
-	'(09/2018)',
-	'CSS Sertificate',
-	'License 1023-10299461',
+	'09/2018',
+	'CSS Fundamentals course / Основи CSS розробки',
+	'1023-10299461',
 	'https://www.sololearn.com/Certificate/1023-10299461/pdf/'),
 
 certificate(
-	'(10/2018)',
-	'JavaScript Tutorial',
-	'License 1024-10299461',
+	'10/2018',
+	'JavaScript Tutorial course / Основи JavaScript розробки',
+	'1024-10299461',
 	'https://www.sololearn.com/Certificate/1024-10299461/pdf/'),
 
 certificate(
-	'(10/2018)',
-	'jQuery Tutorial',
-	'License 1082-10299461',
+	'10/2018',
+	'jQuery Tutorial course / Основи jQuery розробки',
+	'1082-10299461',
 	'https://www.sololearn.com/Certificate/1082-10299461/pdf/')]
 // Certificates End
 
@@ -609,7 +738,7 @@ project(
 
 
 new Vue ({
-	el: '#MatviyRoman',
+	el: '#RomanMatviy',
 	// template:
  //  `<div :style="{width: '55%'}">t</div>`,
 	data: {
@@ -621,14 +750,17 @@ new Vue ({
 		frameworks,
 		languages,
 		links,
+		materials,
 		socials,
 		skills,
 		// skill: skills[0],
 		tools,
 		programs,
 		projects,
+		materialsVisibility: false,
 		phoneVisibility: false,
-		searchLessons: ''
+		searchLessons: '',
+		selected: 1
 	},
 	methods: {
 		selectLesson(lesson,index) {
@@ -636,9 +768,20 @@ new Vue ({
 			this.lesson = this.filteredLessons[index]
 			// this.selectLessonIndex = index
 			console.log('click', index);
+		},
+
+		materials1Show() {
+			this.materials1Show = false
+			this.logs.push(
+				log(`Cancelled order: ${this.car.name} - ${this.car.model}`, 'cnl')
+				)
 		}
 	},
 	computed: {
+		materials1() {
+			return this.materialsShow ? 'Hide materials' : 'Show materials'
+		},
+
 		phoneBtnText() {
 			return this.phoneVisibility ? 'Hide phone' : 'Show phone'
 		},
@@ -881,3 +1024,25 @@ $(document).ready(function(){
 //        	$('.progress-bar').addClass('hide');
 //    }
 // )
+
+
+
+
+
+// sliderCarousel Start
+$(window).on('load', function(){
+    $('.sliderProject1, .sliderProject2').carousel({
+        interval: 3000,
+        pause: 'true',
+        wrap: true
+    })
+    $('.sliderProject1 .prev, .sliderProject2 .prev').click(function(){
+        $('.sliderProject1, .sliderProject2').carousel('prev')
+    })
+    $('.sliderProject1 .next, .sliderProject2 .next').click(function(){
+        $('.sliderProject1, .sliderProject2').carousel('next')
+    })
+    $('.sliderProject1 .prev, .sliderProject1 .next, .sliderProject2 .prev, .sliderProject2 .next').click(function(event) {
+        event.preventDefault();
+    });
+})

@@ -29,13 +29,39 @@ body {
   -moz-user-select: none; /* Firefox 2+ */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*-webkit-scroll-behavior: smooth;*/
+  scroll-behavior: smooth;
+  /*transition: all 7s ease-out;*/
+  /*transition-property: scroll-behavior, color, background-color;
+  transition-duration: 10s;*/
+}
+
+.top {
+  /*scroll-behavior: smooth;
+  transition: all 10s ease-out;*/
+}
+
+.top a {
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  width: 35px;
+  height: 35px;
+  bottom: 5%;
+  right: 3%;
+  position: fixed;
+  z-index: 0;
+}
+
+.top a:hover {
+  transform: scale(1.3);
 }
 
 header {
-  /*-webkit-user-select: none;*/ /* Safari 3.1+ */
-  /*-moz-user-select: none;*/ /* Firefox 2+ */
-  /*-ms-user-select: none;*/ /* IE 10+ */
-  /*user-select: none;*/ /* Standard syntax */
+  z-index: 2;
 }
 
 header>section>.logo {
@@ -75,7 +101,6 @@ header .clouds {
     height: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    /*height: 100vh;*/
     background: url(../img/clouds.png) 0px 100% repeat-x;
     -webkit-animation: cloudsLoop 80s linear infinite;
     animation: cloudsLoop 80s linear infinite;
@@ -107,6 +132,20 @@ header .clouds {
   background-color: rgba(255, 255, 255, .1) !important;
   position: absolute;
   z-index: 9;
+  width: 100%;
+}
+
+.navbar .sicon {
+  color: #fff;
+}
+
+.navbar .nav-link {
+  font-weight: bold;
+}
+
+.navbar .sicon:hover {
+  transform: scale(1.4);
+  transition: all .5s ease-out;
 }
 
 /* The Loader */
@@ -218,10 +257,7 @@ section h3 {
   background-size: contain;
   background-position: 50 0;
   background-repeat: no-repeat;
-  /*-webkit-background-size: cover;
-  background-size: cover;*/
- /* padding-top: 25%;
-  padding-bottom: 25%;*/
+  z-index: -1;
 }
 
 .projects {
@@ -254,8 +290,6 @@ section h3 {
     to {
             -webkit-transform: rotate(359deg);
     }
-}
-
 }
 
 /* Heart beat animation */
@@ -324,9 +358,77 @@ section h3 {
 }
 
 
-.skillset-section {
+.skillset {
   background-color: #1a1e23;
   color: #fff;
+}
+
+.certificates {
+  background: #222 url(../img/bg/certificate-bg.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-top: 1px #000;
+  border-style: dotted;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.certificate {
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform .3s ease-out;
+}
+
+.certificate:hover {
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  transform: scale(1.1);
+  transition: transform .3s ease-out;
+  z-index: 1;
+}
+
+.certificate img {
+  border: 1px solid; rgba(0,0,0,0.5);
+}
+
+.materials {
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+.material {
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  /*max-width: fit-content;*/
+  padding: 1%;
+  /*-webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;*/
+  transition-property: linear-gradient, color, background-color;
+  transition-duration: 10s;
+}
+
+.material:hover {
+  background-image: linear-gradient(141deg, #2cb5e8 0%, #1fc8db 51%, #9fb8ad 75%);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  transform: scale(1.1);
+  z-index: 1;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.material a {
+  color: #006;
+}
+
+.material strong:empty {
+  display: none;
 }
 
 
@@ -681,8 +783,8 @@ footer {
 }
 
 .skill .btn:hover {
-    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
-    transform: translateY(-3px);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
 }
 
 
