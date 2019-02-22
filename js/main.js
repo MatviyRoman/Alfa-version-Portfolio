@@ -64,13 +64,13 @@ material(
 material(
 	'Історія вебу:',
 	'www.evolutionoftheweb.com',
-	'http://www.evolutionoftheweb.com/',
+	'http://www.evolutionoftheweb.com',
 	'en.wikipedia.org/wiki/History_of_the_World_Wide_Web',
 	'https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web'),
 
 material(
-	'Принципи роботи сучасних веб-браузерів. Як працює браузер(ru):',
-	'www.html5rocks.com/ru/tutorials/internals/howbrowserswork/#Parsing_general',
+	'Принципи роботи сучасних веб-браузерів.',
+	'Як працює браузер(ru)',
 	'https://www.html5rocks.com/ru/tutorials/internals/howbrowserswork/#Parsing_general'),
 
 material(
@@ -81,12 +81,12 @@ material(
 material(
 	'Ресурс, де зібрано всі новини у світі веб-розробки:',
 	'uptodate.frontendrescue.org',
-	'https://uptodate.frontendrescue.org/'),
+	'https://uptodate.frontendrescue.org'),
 
 material(
 	'Як працює DNS:',
-	'howdns.works/',
-	'https://howdns.works/'),
+	'howdns.works',
+	'https://howdns.works'),
 
 material(
 	'Для перевірки підтримки браузером тих чи інших можливостей і стандартів існують спеціальні ресурси. Найбільш відомі:',
@@ -98,35 +98,35 @@ material(
 material(
 	'Online редактори коду:',
 	'JSFiddle',
-	'http://jsfiddle.net/',
+	'http://jsfiddle.net',
 	'LiveWeave',
-	'http://liveweave.com/',
+	'http://liveweave.com',
 	'CodePen.io',
 	'http://codepen.io',
 	'JsDo.it',
-	'http://jsdo.it/',
+	'http://jsdo.it',
 	'Cloud9',
-	'https://c9.io/'),
+	'https://c9.io'),
 
 material(
 	'Offline редактори коду:',
 	'Notepad++',
 	'https://notepad-plus-plus.org/download/v6.8.3.html',
 	'Sublime Text3',
-	'http://www.sublimetext.com/',
+	'http://www.sublimetext.com',
 	'Sublime Keyboard Shortcuts',
 	'http://benmccormick.org/content/images/2014/Jun/Sublime_cheat_sheet.png',
 	'Brackets',
-	'http://brackets.io/',
+	'http://brackets.io',
 	'Atom',
-	'https://atom.io/'),
+	'https://atom.io'),
 
 material(
 	'IDE (Integrated Development Environment):',
 	'WebStorm',
-	'https://www.jetbrains.com/webstorm/',
+	'https://www.jetbrains.com/webstorm',
 	'VisualStudio',
-	'https://www.visualstudio.com/'),
+	'https://www.visualstudio.com'),
 
 material(
 	'Other:',
@@ -135,13 +135,13 @@ material(
 	'MDN(CSS)',
 	'https://developer.mozilla.org/ru/docs/Web/CSS',
 	'CSS Tricks',
-	'https://css-tricks.com/',
+	'https://css-tricks.com',
 	'Шпаргалка зі списком всіх CSS стилів',
-	'http://media.mediatemple.netdna-cdn.com/',
+	'http://media.mediatemple.netdna-cdn.com',
 	'Learn Layout(en, es, fr, de, du, it, po, ru,)',
-	'http://learnlayout.com/',
+	'http://learnlayout.com',
 	'Frontender',
-	'http://frontender.info/'),
+	'http://frontender.info'),
 
 material(
 	'JavaScript:',
@@ -151,61 +151,55 @@ material(
 material(
 	'jQuery:',
 	'Documentation english',
-	'http://api.jquery.com/',
+	'http://api.jquery.com',
 	'Documentation russian',
-	'http://jquery-docs.ru/',
+	'http://jquery-docs.ru',
 	'Шпаргалка',
-	'/pdf/jQuery-1_5-Visual-Cheat-Sheet.pdf')]
+	'pdf/jQuery-1_5-Visual-Cheat-Sheet.pdf')]
 // Additional materials End
 
 
 
 // Front-End Start
-const frontEnd = (name, num, img, link) => ({name, num, img, link});
+const frontEnd = (name, num, img) => ({name, num, img});
 
 const frontEnds = [
 frontEnd(
 	'HTML 5',
 	'85',
-	'devicon-html5-plain-wordmark colored html',
-	'zip/wwwvuejs2.zip'),
+	'devicon-html5-plain-wordmark colored html'),
 
 frontEnd(
 	'CSS 3',
 	'80',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 frontEnd(
 	'CSS Flexbox',
 	'78',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 frontEnd(
 	'JavaScript',
 	'40',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'img/1.jpg')]
 // Front-End End
 
 
 
 // Back-End Start
-const backEnd = (name, num, img, link) => ({name, num, img, link});
+const backEnd = (name, num, img) => ({name, num, img});
 
 const backEnds = [
 backEnd(
 	'PHP',
 	'20',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 backEnd(
 	'MySQL',
 	'15',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'img/1.jpg')]
 // Back-End End
 
 
@@ -215,31 +209,31 @@ const certificate = (date, name, license, link) => ({date, name, license, link})
 
 const certificates = [
 certificate(
-	'18/02/2019',
+	'18 Feb 2019',
 	'Basics of Web UI development / Основи Web UI розробки',
 	'36340060295e40e5b149e02866465b3d',
 	'https://courses.prometheus.org.ua:18090/cert/36340060295e40e5b149e02866465b3d'),
 
 certificate(
-	'09/2018',
+	'09 Sep 2018',
 	'HTML Fundamentals course / Основи HTML розробки',
 	'1014-10299461',
 	'https://www.sololearn.com/Certificate/1014-10299461/pdf/'),
 
 certificate(
-	'09/2018',
+	'08 Sep 2018',
 	'CSS Fundamentals course / Основи CSS розробки',
 	'1023-10299461',
 	'https://www.sololearn.com/Certificate/1023-10299461/pdf/'),
 
 certificate(
-	'10/2018',
+	'15 Oct 2018',
 	'JavaScript Tutorial course / Основи JavaScript розробки',
 	'1024-10299461',
 	'https://www.sololearn.com/Certificate/1024-10299461/pdf/'),
 
 certificate(
-	'10/2018',
+	'16 Oct 2018',
 	'jQuery Tutorial course / Основи jQuery розробки',
 	'1082-10299461',
 	'https://www.sololearn.com/Certificate/1082-10299461/pdf/')]
@@ -248,88 +242,77 @@ certificate(
 
 
 // CMS Start
-const cms = (name, num, img, link) => ({name, num, img, link});
+const cms = (name, num, img) => ({name, num, img});
 
 const cmss = [
 cms(
 	'OcClass',
 	'75',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 cms(
 	'OpenCart',
 	'80',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 cms(
 	'WordPress',
 	'70',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'img/1.jpg')]
 // CMS End
 
 
 
 // Framework Start
-const framework = (name, num, img, link) => ({name, num, img, link});
+const framework = (name, num, img) => ({name, num, img});
 
 const frameworks = [
 framework(
 	'Bootstrap',
 	'75',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 framework(
 	'jQuery',
 	'40',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 framework(
 	'VueJS',
 	'30',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 framework(
 	'Angular 2',
 	'20',
-	'devicon-html5-plain-wordmark colored html',
-	'zip/wwwvuejs2.zip')]
+	'devicon-html5-plain-wordmark colored html')]
 // Framework End
 
 
 
 // Language Start
-const language = (name, num, img, link) => ({name, num, img, link});
+const language = (name, num, img) => ({name, num, img});
 
 const languages = [
 language(
 	'English',
 	'40',
-	'img/1.jpg',
-	''),
+	'img/1.jpg'),
 
 language(
 	'Polish',
 	'25',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 language(
 	'Ukrainian',
 	'100',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 language(
 	'Russian',
 	'80',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip')]
+	'img/1.jpg')]
 // Language End
 
 
@@ -391,57 +374,50 @@ social(
 
 
 // Skills Start
-const skill = (name, num, img, link) => ({name, num, img, link});
+const skill = (name, num, img) => ({name, num, img});
 
 const skills = [
 skill(
 	'Browser Developer Tools',
 	'70',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 skill(
 	'PSD to HTML5',
 	'87',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 skill(
 	'Landing Page',
 	'30',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 skill(
 	'Responsive Design',
 	'85',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 skill(
 	'Plugin Elementor',
 	'70',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 skill(
 	'UI / UX Design',
 	'25',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),]
+	'img/1.jpg')]
 // Skills End
 
 
 
 // Tool Start
-const tool = (name, num, img, link) => ({name, num, img, link});
+const tool = (name, num, img) => ({name, num, img});
 
 const tools = [
 tool(
 	'Chrome Browser',
 	'75',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 tool(
 	'Firefox Browser',
@@ -483,20 +459,18 @@ tool(
 
 
 // Programs Start
-const program = (name, num, img, link) => ({name, num, img, link});
+const program = (name, num, img) => ({name, num, img});
 
 const programs = [
 program(
 	'Avocode',
 	'90',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 program(
 	'FileZilla (FTP)',
 	'90',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 // program(
 // 	'Brackets',
@@ -507,34 +481,39 @@ program(
 program(
 	'Sublime Text',
 	'80',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 program(
 	'Photoshop',
 	'49',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 program(
 	'PhpStorm',
 	'36',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),
+	'img/1.jpg'),
 
 program(
 	'Visual Studio Code',
 	'49',
-	'img/1.jpg',
-	'zip/wwwvuejs2.zip'),]
+	'img/1.jpg')]
 // Programs End
 
 
 
 // Project Start
-const project = (date, url, github, name, desc, skills, img, active) => ({date, url, github, name, desc, skills, img, active});
+const project = (date, url, github, name, desc, skills, active) => ({date, url, github, name, desc, skills, active});
 
 const projects = [
+project(
+	'21 Feb 2019',
+	'matviy.pp.ua',
+	'https://github.com/MatviyRoman/Portfolio2019',
+	'My New Portfolio',
+	`We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
+	'HTML5, CSS3, Bootstrap 4, vue.js, jQuery, Responsive Design',
+	'active'),
+
 project(
 	'15 Jan 2019',
 	'camel.matviy.pp.ua',
@@ -542,8 +521,7 @@ project(
 	'Camel Heal',
 	`We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'1bg.jpg',
-	'active'),
+	''),
 
 project(
 	'21 Dec 2018',
@@ -552,7 +530,6 @@ project(
 	'Home',
 	'Зверстати у відповідності до прикріпленого макету. Необхідні технології: Сss framework: bootstrap 3 або 4 Js framework : Jquery Валідний код та адаптація під мобільні пристрої.',
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'2bg.jpg',
 	''),
 
 project(
@@ -562,7 +539,6 @@ project(
 	'magazino.ga',
 	'My Home Project. Wordpress. My design with using plugin Elementor',
 	'HTML5, CSS3, Wordpress, plugin Elementor, Landing Page',
-	'3bg.jpg',
 	''),
 
 project(
@@ -572,7 +548,6 @@ project(
 	'Pantomax',
 	'Сделать верстку с макета и адаптировать ее под мобильные устройства. Ссылка прилагается на макет, адаптивную верстку необходимо сделать на свое усмотрение.',
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'4bg.jpg',
 	''),
 
 project(
@@ -582,7 +557,6 @@ project(
 	'todo-list',
 	`Техническое задание: Реализовать todo list (список дел). Функционал: вывод списка задач из базы данных, создание новой задачи, редактирование задачи, удаление задачи. Клиентская часть. Для всего использовать Angular Material Design. Основной компонент приложения - список задач. При открытии страницы должен показываться лоадер (задачи загружаются…). 1.1 Если задач в базе нет, вывести сообщение об этом и кнопку “создать первую задачу”. 1.2 Если есть задачи, список задач в виде таблицы (столбцы - id задачи, текст задачи, дата создания, действия с задачей). Кнопка добавления новой задачи над таблицей. При нажатии на кнопку добавления задачи открывается боковое окно (drawer) с заголовком (toolbar). 2.1 В боковом окне будет расположено текстовое поле + кнопка “добавить задачу”. 2.2 Кнопка должна быть неактивной, если поле пустое. 2.3 При добавлении задачи сначала должен показываться лоадер (подождите, идёт добавление), а затем окно должно закрываться. В случае ошибки должно появляться сообщение (в виде snackbar). 2.4 Добавить ошибку в случае, если введенный текст содержит символ “!”. Т.е. если пользователь ввёл текст “Выполнить испытательное задание!”, то при попытке создать задачу должен сначала показаться лоадер, а затем снова поле с кнопкой + в snackbar должно появиться сообщение с ошибкой. 2.5 После добавления задачи она также добавляется в таблицу на странице. При наведении на строку задачи в таблице, возле текста задачи появляется иконка редактирования (ручка). 3.1 При нажатии на кнопку редактирования открывается модальное окно (dialog) с текстовым полем и кнопками “Отмена” и “Сохранить”. 3.2 При нажатии на “Сохранить” сначала показывается лоадер (progress bar), затем окно закрывается и текст задачи в таблице меняется. В последней колонке (действия с задачей) должна быть кнопка-иконка корзины. 4.1 При нажатии открывается модальное окно (dialog) с подтверждением удаления. 4.2 При подтверждении удаления сначала показывается лоадер (progress bar), затем окно закрывается и задачи удаляется из списка проекта.`,
 	'VueJS, HTML5, CSS3, Bootstrap 4, Responsive Design, Landing Page',
-	'5bg.jpg',
 	''),
 
 project(
@@ -592,7 +566,6 @@ project(
 	'Travel Agency',
 	'Responsive design with psd layouts',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
-	'6bg.jpg',
 	''),
 
 project(
@@ -602,17 +575,15 @@ project(
 	'Roman.Matviy.CV',
 	'Responsive design with psd layouts Roman.Matviy.CV',
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design, Landing Page',
-	'7bg.jpg',
 	''),
 
 project(
 	'14 Nov 2018',
-	'learn.matviy.pp.ua/JavaScript/',
+	'learn.matviy.pp.ua',
 	'https://github.com/MatviyRoman/Learn-Theory-of-JS',
 	'Learn Theory of JS',
 	'Responsive design with psd layouts. Learn Theory of JS',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page',
-	'8bg.jpg',
 	''),
 
 project(
@@ -622,7 +593,6 @@ project(
 	'Short code vue',
 	'Learn Theory of vue.js',
 	'VueJS, HTML5, CSS3',
-	'9bg.jpg',
 	''),
 
 project(
@@ -632,7 +602,6 @@ project(
 	'Test vue.js',
 	'Learn Theory of vue.js',
 	'VueJS, HTML5, CSS3',
-	'10bg.jpg',
 	''),
 
 project(
@@ -642,7 +611,6 @@ project(
 	'Old my resume',
 	'Learn Theory of vue.js',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page',
-	'11bg.jpg',
 	''),
 
 project(
@@ -652,7 +620,6 @@ project(
 	'Startup',
 	'Responsive design with psd layouts',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
-	'20bg.jpg',
 	''),
 
 project(
@@ -662,7 +629,6 @@ project(
 	'AngularJS',
 	'AngularJS',
 	'HTML5, CSS3, AngularJS',
-	'12bg.jpg',
 	''),
 
 project(
@@ -672,7 +638,6 @@ project(
 	'example',
 	'Responsive design with psd layouts',
 	'HTML5, CSS3, Bootstrap 3, Responsive Design',
-	'13bg.jpg',
 	''),
 
 project(
@@ -682,7 +647,6 @@ project(
 	'HTML Tables Generation',
 	'HTML Tables Generation. My Home Project. Responsive design with psd layouts HTML Tables Generation',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design, Landing Page',
-	'14bg.jpg',
 	''),
 
 project(
@@ -692,7 +656,6 @@ project(
 	'mytesting.ga',
 	'HTML Tables Generation. My Home Project. Responsive design with psd layouts HTML Tables Generation',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
-	'15bg.jpg',
 	''),
 
 project(
@@ -702,7 +665,6 @@ project(
 	'Creatives',
 	'Responsive design with psd layouts',
 	'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
-	'16bg.jpg',
 	''),
 
 project(
@@ -712,7 +674,6 @@ project(
 	'МЦ Арника arnika.od.ua',
 	'Було завдання з оригінального сайту зробити Responsive Design. Оригінал з того, що я робив можна глянути тут http://arnika.matviy.pp.ua/original/index.html',
 	'HTML5, CSS3, Bootstrap 4, Responsive Design',
-	'17bg.jpg',
 	''),
 
 project(
@@ -722,7 +683,6 @@ project(
 	'Window modal test',
 	'Responsive design with psd layouts. This is my window modal test.',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
-	'18bg.jpg',
 	''),
 
 project(
@@ -732,15 +692,14 @@ project(
 	'Bisines-Company',
 	'My project building with bootstrap &amp; jQuery. Responsive design with psd layouts',
 	'HTML5, CSS3, Bootstrap 3, jQuery, Responsive Design',
-	'19bg.jpg',
 	'')]
 // Project End
 
 
 new Vue ({
-	el: '#RomanMatviy',
+	el: '#Roman_Matviy',
 	// template:
- //  `<div :style="{width: '55%'}">t</div>`,
+	// `<div :style="{width: '55%'}">t</div>`,
 	data: {
 		abouts,
 		backEnds,
@@ -753,32 +712,37 @@ new Vue ({
 		materials,
 		socials,
 		skills,
-		// skill: skills[0],
 		tools,
 		programs,
 		projects,
-		materialsVisibility: false,
+		project: projects[0],
+		selectedProjectIndex: 0,
+		materialsShow: false,
 		phoneVisibility: false,
-		searchLessons: '',
-		selected: 1
+		searchProjects: '',
+		select: 1
 	},
 	methods: {
-		selectLesson(lesson,index) {
-			this.lesson = lesson;
-			this.lesson = this.filteredLessons[index]
-			// this.selectLessonIndex = index
-			console.log('click', index);
+		selectProject: function(index){
+			console.log('Click', index)
+			this.project = projects[index]
+			this.selectedProjectIndex = index
 		},
 
-		materials1Show() {
-			this.materials1Show = false
-			this.logs.push(
-				log(`Cancelled order: ${this.car.name} - ${this.car.model}`, 'cnl')
-				)
+		//  select(project,index) {
+		// 		this.project = project;
+		// 		this.project = this.filteredLessons[index]
+		// 		this.selectLessonIndex = index
+		// 		console.log('click', index);
+		// },
+
+		materialsShow() {
+			this.materialsShow = false
+			this.logs.push(log(`Cancelled order: ${this.car.name} - ${this.car.model}`, 'cnl'))
 		}
 	},
 	computed: {
-		materials1() {
+		materials() {
 			return this.materialsShow ? 'Hide materials' : 'Show materials'
 		},
 
@@ -802,17 +766,6 @@ new Vue ({
 
 // $('.skill:has(img[alt="5 copy_200comp.jpg"])').show();
 
-// var i = 38
-// switch (i) {
-//     case ((i>=0 && i<=19)?i:-1): $(".progress-bar").attr("class", "bg-danger"); console.log('0-19'); break;
-//     case ((i>=20 && i<=39)?i:-1): $(".progress-bar").attr("class", "bg-danger"); console.log('20-39'); break;
-//     case ((i>=40 && i<=59)?i:-1): $(".progress-bar").attr("class", "bg-danger"); console.log('40-59'); break;
-//     case ((i>=60 && i<=79)?i:-1): $(".progress-bar").attr("class", "bg-success"); console.log('60-79');
-//     default: console.log('80-100'); break;
-// }
-
-
-
 // let i = skill.num;
 // while (i < skills.length) {
 //   alert( i );
@@ -824,33 +777,6 @@ new Vue ({
 //     default: $(".progress-bar").attr("class", "bg-danger"); console.log('80-100'); break;}
 //   i++;
 // }
-
-// l i = $(".progress-bar b").text();
-
-// switch (i) {
-//     case ((i>=20 && i<=19)?i:-1): $(this).css("color", "#ffffff"); console.log('0-19');
-//     case ((i>=20 && i<=39)?i:-1): $(".progress-bar").attr("class", "bg-danger"); console.log('20-39');
-//     case ((i>=40 && i<=59)?i:-1): $(".progress-bar").attr("class", "bg-success"); console.log('40-59');
-//     case ((i>=60 && i<=79)?i:-1): $(".progress-bar").attr("class", "bg-info"); console.log('60-79');
-//     default: $(".progress-bar").attr("class", "bg-danger"); console.log('80-100'); break;}
-// } i++;}
-
-
-   //  if (content == "high") {
-
-   //      $(this).css("color", "#ffffff");
-   //  }
-   // if (content == "low") {
-
-   //      $(this).css("color", "#ccc");
-   //  }
-   // if (content == "critical") {
-
-   //      $(this).css("color", "#000");
-   //  }
-
-
-
 
 
 
@@ -1036,10 +962,10 @@ $(window).on('load', function(){
         pause: 'true',
         wrap: true
     })
-    $('.sliderProject1 .prev, .sliderProject2 .prev').click(function(){
+    $('.sliderProject1 .prev, .sliderProject2e .prev').click(function(){
         $('.sliderProject1, .sliderProject2').carousel('prev')
     })
-    $('.sliderProject1 .next, .sliderProject2 .next').click(function(){
+    $('.sliderProject1 .next, .sliderProject2e .next').click(function(){
         $('.sliderProject1, .sliderProject2').carousel('next')
     })
     $('.sliderProject1 .prev, .sliderProject1 .next, .sliderProject2 .prev, .sliderProject2 .next').click(function(event) {
