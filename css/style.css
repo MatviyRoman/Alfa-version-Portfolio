@@ -38,6 +38,56 @@ body {
   transition-duration: 10s;*/
 }
 
+
+input {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 10vw;
+  font-size: 2vw;
+  width: 100vw;
+}
+
+textarea {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 5px;
+  width: 100vw;
+  height: 50vh;
+  font-size: 2vw;
+}
+
+button {
+  border: none;
+  background-color: white;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  transition: transform .5s;
+}
+
+input:focus {
+  outline: none;
+  color: orange;
+  border-radius: 3px;
+}
+
+textarea:focus {
+  outline: none;
+  color: orange;
+  border-radius: 7px;
+}
+
+button:focus {
+  outline: none;
+  transform: scale(0);
+  transform: rotate(360deg);
+}
+
+
 .top {
   /*scroll-behavior: smooth;*/
   transition: all 10s ease-out;
@@ -61,7 +111,7 @@ body {
 }
 
 header {
-  z-index: 2;
+  z-index: 3;
 }
 
 header>section>.logo {
@@ -226,6 +276,7 @@ section h3 {
   background: #1B2C3C;
   /*background: #222;*/
   color: #fbdb65;
+  position: relative;
 }
 
 .about .btn-default {
@@ -233,9 +284,58 @@ section h3 {
   background-color: rgba(102, 102, 102, 0.32);
 }
 
-.about .me {
-  outline: 3px solid rgba(34, 34, 34, .7);
+.about .image-container {
+  position: relative;
+  background: url(../img/colorMe.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 3s all ease-out;
+}
+
+.about .color {
+  border-style: outset;
+  border-color: #fbdb65;
+  border-width: 7px;
   outline-offset: -15px;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transition: 3s all ease-out;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.about .hover {
+  opacity: 0;
+  transition: 3s all ease-out;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.about .Roman_Matviy {
+  border-style: outset;
+  border-color: #fbdb65;
+  border-width: 7px;
+  outline-offset: -15px;
+  /*outline: 1px solid rgba(243, 230, 213, 0.7);*/
+  /*outline: 3px solid rgba(27, 44, 60, .7);
+  outline-offset: -15px;*/
+  transition: 3s all;
+ /*-webkit-filter: blur(5px);*/ /* Safari 6.0 - 9.0 */
+ /*filter: blur(5px);*/
+}
+
+.about .black {
+  position: absolute;
+  top: -471px;
 }
 
 .social {
@@ -327,12 +427,12 @@ section h3 {
 }
 
 @-webkit-keyframes rotation {
-    from {
-            -webkit-transform: rotate(0deg);
-    }
-    to {
-            -webkit-transform: rotate(359deg);
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
 }
 
 /* Heart beat animation */
@@ -806,6 +906,9 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 footer {
   background: #000;
+}
+#map {
+  height: 400px;
 }
 
 
