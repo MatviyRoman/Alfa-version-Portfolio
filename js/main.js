@@ -7,6 +7,108 @@ $(document).ready(function() {
 });
 
 
+$(function(){
+  	$('.about').hover(function() {
+    	$('.Roman_Matviy').addClass('hover');
+    	$('.image-container').addClass('color');
+  	}, function() {
+    	$('.Roman_Matviy').removeClass('hover');
+    	$('.image-container').removeClass('color');
+  	})
+})
+
+
+function sendMail() {
+    var link = "mailto:roman@matviy.pp.ua"
+             + "?mailfrom" + escape(document.getElementById('email').value)
+             + "&subject=" + escape("This is my subject")
+             + "&body=" + escape(document.getElementById('message').value)
+    ;
+
+    window.location.href = link;
+}
+
+
+function send() {
+  setTimeout(function() {
+    window.open("mailto:roman@matviy.pp.ua"
+    	// + "?cc="+ document.getElementById('email').value + ";"
+    	+ "?subject=" + document.getElementById('subject').value
+    	+ "&body=" + document.getElementById('message').value);
+  }, 320);
+}
+
+
+
+
+
+const email = new Vue({
+  el: '#emailToMe',
+  data: {
+    errors: [],
+    name: null,
+    email: null,
+    message: null
+  },
+  methods: {
+    checkForm: function (e) {
+      this.errors = [];
+
+      if (!this.name) {
+        this.errors.push('Укажите имя.');
+      }
+      if (!this.email) {
+        this.errors.push('Укажите электронную почту.');
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push('Укажите корректный адрес электронной почты.');
+      }
+
+      if (!this.errors.length) {
+        return true;
+      }
+
+      e.preventDefault();
+    },
+    validEmail: function (email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+  }
+})
+
+
+
+
+
+
+// $('#sendEmail, button').click(function(){
+// 	event.preventDefault();
+//     $(location).attr('href', 'mailto:roman@matviy.pp.ua?cc='
+//     						 + "?cc="
+//     						 + "&subject="
+//                              + encodeURIComponent("This is my subject")
+//                              + "&body="
+//                              + encodeURIComponent("This is my body")
+//     );
+// });
+
+
+function myMap() {
+	var myLatLng = {lat: 49.8079356, lng: 24.0592995};
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(49.832689,24.012236),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World! I live in Lviv ;)'
+  });
+}
+
+
 
 // WOW Animated
 // wow = new WOW({
@@ -570,7 +672,7 @@ project(
 
 project(
 	'15 Nov 2018',
-	'Roman.Matviy.pp.ua',
+	'roman.matviy.pp.ua',
 	'https://github.com/MatviyRoman/Roman.Matviy.CV',
 	'Roman.Matviy.CV',
 	'Responsive design with psd layouts Roman.Matviy.CV',
