@@ -1128,6 +1128,10 @@ footer {
     background-size: contain;
 }
 
+footer .container {
+    background: #000;
+}
+
 .navbar-footer {
     /*background-color: rgba(255, 255, 255, 0.3) !important;*/
      position: relative;
